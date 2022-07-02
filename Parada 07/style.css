@@ -1,0 +1,24 @@
+table{
+    margin: auto;
+    text-align: center;
+    width: 600px;
+    height: 400px;
+    border-collapse: collapse;
+    border: solid 2px black;
+}
+
+#Header-tab{
+    color: white;
+    background-color: rgb(38, 122, 38);
+}
+
+#Header-menu-cod, #Header-menu-nome, #Header-menu-pr{
+    background-color: rgb(38, 122, 38);
+    color: white;
+}
+
+td,th{
+    padding: 9px; 
+    margin: 0;
+    color: black;
+}

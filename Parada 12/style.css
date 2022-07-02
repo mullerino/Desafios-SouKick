@@ -1,0 +1,102 @@
+body{
+    min-height: 650px;
+    background-image: url("imgs/casas.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+table{
+    margin: auto;
+    width: 850px;
+    height: 420px;
+    background-color: #c1c0ae;
+    border-collapse: collapse;
+    
+}
+
+#header-box img{
+    border-radius: 30px;
+    width: 150px;
+    margin-top: 3px;
+}
+
+#nav-box{
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+}
+
+#nav-box ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+#nav-box li{
+    float: left;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#nav-box a{
+    text-decoration: none;
+    padding: 7px;
+}
+
+#nav-box a:not(.teste){
+    color: black;
+}
+
+.teste{
+    background-color:#e58c56;
+    color: white;
+}
+
+#nav-box a:hover:not(.teste){
+    background-color:#e58c56;
+    color: white;
+    transition: 0.4s;
+}
+
+.article-box{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    text-align: justify;
+    padding: 15px;
+    margin: 0;
+}
+
+#img-casa-box{ 
+    width: 350px;
+    padding: 15px;
+}
+
+#img-casa-box img{ 
+    width: 100%;
+    box-shadow: 0px 0 20px 0px black ;
+    border-radius: 60px;
+}
+
+#img-casa-box figcaption{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#img-casa-box #contato-img{
+    box-shadow: 0px 0 20px 0px black ;
+    border-radius: 12px;
+}
+
+#footer-box{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}

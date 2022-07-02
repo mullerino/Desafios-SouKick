@@ -1,0 +1,160 @@
+header{
+    background-color: rgba(255, 121, 19, 0.80);
+    color: black;
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+header h1 {
+    display: inline;
+}
+
+header img{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 10px;
+    top: 5px;
+    border-radius: 30px 30px 30px 30px;
+
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+    background-color: rgba(240, 164, 76, 0.89);
+    margin: 0;
+}
+
+nav{
+    text-align: center;
+    margin: 0;
+    color: black;
+    width: 100%;
+}
+
+#menu{
+    list-style-type: none;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(255, 121, 19, 0.80);
+    margin: 0px;
+    width: 100%;
+    padding: 8px 0 8px 0;
+}
+
+#menu li{ 
+    display: inline-block;
+    padding: 5px;
+}
+
+#menu li a{
+    text-decoration: none;
+    margin-bottom: 50px;
+    color:rgba(11, 13, 15, 0.60);
+}
+
+#menu li a:hover{
+    color: rgb(13, 16, 19);
+    font-size: 18.5px;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow:  inset 0 0 1em rgb(194, 74, 18);
+}
+
+article{
+    background-color: rgba(255, 121, 19, 0.80);
+    color: rgb(20, 26, 31);
+    width: 40.2%;
+    margin-left: 29.9%;
+    margin-top: 30px;
+    border-radius: 30px 30px 0 0;
+}
+
+figcaption{
+    text-align: center;
+}
+
+article img{
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 0 1px 1px;
+}
+
+#img-livro{
+    height: 420px;
+}
+
+p{
+    padding: 15px;
+    text-align: justify;
+    margin: 0;
+}
+
+h1{
+    margin: 0px;
+}
+
+h2{
+    text-align: left;
+    padding-left: 20px;
+}
+
+hr{
+    margin-bottom: 0px;
+}
+
+.dropD{
+    position: relative;
+    display: inline-block;
+}
+
+.dropDC{
+    display: none;
+    position: absolute;
+    background-color: #ff9b4f;
+    left: 150px;
+    bottom: 1px;
+    width: 500px;
+    box-shadow: 8px 8px 16px 0px;
+    border-radius: 5px 8px 5px 8px;
+    z-index: 1;
+}
+
+.dropD:hover .dropDC{
+    display: block;
+}
+
+.dropD2,.dropD3{
+    position: relative;
+    display: inline-block;
+}
+
+.dropDC2,.dropDC3{
+    display: none;
+    position: absolute;
+    background-color: #ff9b4f;
+    left: 250px;
+    bottom: 1px;
+    width: 500px;
+    box-shadow: 8px 8px 16px 0px;
+    border-radius: 5px 8px 5px 8px;
+    z-index: 1;
+}
+
+.dropD2:hover .dropDC2{
+    display: block;
+}
+.dropD3:hover .dropDC3{
+    display: block;
+}
+
+#endtext{
+    font-size: 17px;
+}
+
+#titC{
+    padding-left: 25px;
+}
