@@ -4,60 +4,141 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type = 'text/css' href="style.css">
-    <title>Eleição</title>
+    <title>Eleição 2022</title>
+    <style>
+        body{
+            background: linear-gradient(90deg,lightcoral, rgb(241, 62, 62));
+            min-width: 1000px;
+            min-height: 700px;
+        }
+
+        .content-text{
+            width: 500px;
+            padding: 10px;
+            margin: auto;
+            color: white;
+        }
+
+        .content-text h1{
+            text-align: center;
+        }
+
+        .content-text p{
+            text-align: center;
+            font-size: 22px;
+        }
+        
+        #content-candidatos{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 100px;
+            padding: 10px;
+            height: 800px;
+            width: max-content;
+            gap: 10px;
+            border-radius: 10px;
+        }
+
+        .box-candidatos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 16px;
+            padding: 5px 15px;
+            background: #FFF;
+            width: 300px;
+        }
+
+        .box-candidatos img{
+            height: 30%;
+            width: 78%;
+            border-radius: 150px;
+            box-shadow: 0 0px 0px 2px rgb(0, 0, 0);
+        }
+
+        .box-candidatos p{
+            text-align: justify;
+            line-height: 1.6;
+            padding: 15px;
+        }
+
+        .nome-candidatos{
+            font-size: 22px;
+            margin: 0;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-radius: 140px;  
+        }
+
+        .nome-candidatos:hover{
+            background: linear-gradient(90deg,lightcoral, rgb(241, 62, 62)); 
+            transition: 0.4s;
+        }
+
+        #space-button{
+            width: 200px;
+            text-align: center;
+            margin: auto;
+        }
+
+        #button-votar{
+            margin: auto;
+            border-radius: 100px;
+            width: 200px;
+            height: 100px;
+            font-size: 25px;
+            background-color: black;
+            color: white;
+            outline: none;
+        }
+
+        #button-votar:hover{
+            background-color: bisque;
+            color: black;
+            transition: 0.4s;
+        }
+        
+    </style>
 </head>
-
-
 <body>
     <div id="main">
-        <h2>Eleição 2022</h2>
+        <div class="content-text">
+            <h1>Eleições 2022</h1>
+            <p>Chegamos a mais um ano de eleição, vote consciente!!</p>
+        </div>
+        <div id="content-candidatos">
+            <div class="box-candidatos">
+                <p class="nome-candidatos">JuJu</p>
+                <img src="imgs/ju.jpeg">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="box-candidatos">
+                <p class="nome-candidatos">MoniMoni</p>
+                <img src="imgs/moni.jpeg">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="box-candidatos">
+                <p class="nome-candidatos">Mullerino</p>
+                <img src="imgs/eu.jpeg">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="box-candidatos">
+                <p class="nome-candidatos">Luiz</p>
+                <img src="https://static.poder360.com.br/2022/04/Lula-com-oculos-juliet.jpeg">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+        <div id="space-button">
+            <button type="submit" id="button-votar" onclick="votar()">Votar agora</button>
+        </div>
     </div>
 
     <script>
-        var contWh = 0 
-        var saida
-        var votos = [0,0,0,0,0]
-        var candidatos
-
-        while(contWh == 0){
-
-            candidatos = parseInt(prompt("Candidatos : Júlia [Nº 1] | Monique [Nº 24] | Leandro [Nº 7] | Luiz I. [Nº 13] | Voto nulo/branco [0]"))
-
-            switch(candidatos){
-                case 1:
-                    votos[0]++
-                    break;
-                case 24:
-                    votos[1]++
-                    break;
-                case 7:
-                    votos[2]++
-                    break;
-                case 13:
-                    votos[3]++
-                    break;
-                case 0:
-                    votos[4]++
-                    break;
-                default:
-                    alert("Voto inválido, vote novamente!")
-                    break;
-            }
-
-            saida = prompt("Digite 1 caso queira votar novamente | Digite 2 caso queira sair da votação")
-
-            if(saida == 2){
-                contWh = 1
-            }
+        function votar(){
+            window.location.href = 'votação.html'
         }
-
-        document.getElementById('main').innerHTML += "<p>A candidata JuJu teve " + votos[0] + " votos</p>";
-        document.getElementById('main').innerHTML += "<p>A candidato MoniMoni teve " + votos[1] + " votos</p>";
-        document.getElementById('main').innerHTML += "<p>O candidato Mullerino teve " + votos[2] + " votos</p>";
-        document.getElementById('main').innerHTML += "<p>O candidato Luiz teve " + votos[3] + " votos</p>";
-        document.getElementById('main').innerHTML += "<p>Votos nulos:  " + votos[4] + "</p>";
-
     </script>
 </body>
 </html>

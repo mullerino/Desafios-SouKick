@@ -1,12 +1,26 @@
+#fora{
+    height: 920px;
+}
+
 #main{
     background-color: cornflowerblue;
     color: white; 
-    width: 450px; 
-    font-size: 18px;
+    width: 530px; 
+    font-size: 20px;
     margin: auto;
+    padding: 10px;
+    height: 800px;
 }
 
 p, h2{
     text-align: center;
+}
+
+img{
+    border-radius: 150px;
+    width: 40%;
+    height: 25%;
+    margin-left: 170px;
+    margin-top: 40px;
 }
 

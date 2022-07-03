@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type = 'text/css' href="style.css">
+    <title>Eleição</title>
+</head>
+
+
+<body>
+    <div id="fora">
+        <div id="main">
+            <h2>Eleição 2022</h2>
+        </div>
+    </div>
+
+    <script>
+        var contWh = 0 
+        var saida
+        var votos = [0,0,0,0,0]
+        var candidatos
+        var maisVot = 0
+        var pMaisVot = 0
+        var nomeCand = ""
+
+        while(contWh == 0){
+
+            candidatos = parseInt(prompt("Candidatos : Júlia [Nº 1] | Monique [Nº 24] | Leandro [Nº 7] | Luiz I. [Nº 13] | Voto nulo/branco [0]"))
+
+            switch(candidatos){
+                case 1:
+                    votos[0]++
+                    break;
+                case 24:
+                    votos[1]++
+                    break;
+                case 7:
+                    votos[2]++
+                    break;
+                case 13:
+                    votos[3]++
+                    break;
+                case 0:
+                    votos[4]++
+                    break;
+                default:
+                    alert("Voto inválido, vote novamente!")
+                    break;
+            }
+
+            saida = prompt("Digite 1 caso queira votar novamente | Digite 2 caso queira sair da votação")
+
+            if(saida == 2){
+                contWh = 1
+            }
+        }
+
+        document.getElementById('main').innerHTML += "<p>A candidata JuJu teve " + votos[0] + " votos</p>";
+        document.getElementById('main').innerHTML += "<p>A candidato MoniMoni teve " + votos[1] + " votos</p>";
+        document.getElementById('main').innerHTML += "<p>O candidato Mullerino teve " + votos[2] + " votos</p>";
+        document.getElementById('main').innerHTML += "<p>O candidato Luiz teve " + votos[3] + " votos</p>";
+        document.getElementById('main').innerHTML += "<p>Votos nulos:  " + votos[4] + "</p>";
+
+        maisVot = Math.max.apply(null, votos);
+        pMaisVot = votos.indexOf(maisVot)
+
+        if(pMaisVot == 0){
+            nomeCand = "JuJu"
+            document.getElementById('main').innerHTML += "<img src='imgs/ju.jpeg'>"
+        }
+        else if(pMaisVot == 1){
+            nomeCand = "MoniMoni"
+            document.getElementById('main').innerHTML += "<img src='imgs/moni.jpeg'>"
+            }
+        else if(pMaisVot == 2){
+            nomeCand = "Mullerino"
+            document.getElementById('main').innerHTML += "<img src='imgs/eu.jpeg'>"
+            }
+        else if(pMaisVot == 3){
+            nomeCand = "Luiz"
+            document.getElementById('main').innerHTML += "<img src='https://static.poder360.com.br/2022/04/Lula-com-oculos-juliet.jpeg'>"
+        }
+        else if(pMaisVot == 4){
+            nomeCand = "Nulo"
+            document.getElementById('main').innerHTML += "<img src='https://blogcarlossantos.com.br/wp-content/uploads/2018/04/voto-nulo.jpg'>"
+        }
+
+        document.getElementById('main').innerHTML += "<p style='margin-top: 10px;'>O(A) candidato(a) mais votado(a) foi " + nomeCand +" com "+ maisVot + " votos!!</p>"
+        document.getElementById('main').innerHTML += "<h2> PARABÉNS!!!!</h2>"
+        
+    </script>
+</body>
+</html>
