@@ -1,0 +1,12 @@
+#main{
+    background-color: cornflowerblue;
+    color: white; 
+    width: 450px; 
+    font-size: 18px;
+    margin: auto;
+}
+
+p, h2{
+    text-align: center;
+}
+
