@@ -40,13 +40,13 @@ body{
     width: 50vw;
     height: 80vh;
     margin-right: 10px;
-    gap: 25px;
+    gap: 20px;
 }
 
 .card-QuizMat, .card-QuizCal, .card-QuizFis{
     border-radius: 20px;
     width: 30%;
-    height: 75%;
+    height: 85%;
     padding: 5px;  
 }
 
@@ -120,4 +120,70 @@ body{
     color: white;
     background: #0F8DBF;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1600px) {
+
+    .card-left{
+        width: 45vw;
+    }
+
+    .card-rigth{
+        width: 55vw;
+        flex-wrap: nowrap;
+    }
+
+    .card-QuizMat, .card-QuizCal, .card-QuizFis{
+        height: 95%;
+    }
+
+    .card-QuizMat> h2, .card-QuizCal> h2, .card-QuizFis> h2{
+        font-size: 20px;
+    }
+
+    #cardMat-btn, #cardCal-btn, #cardFis-btn {
+        margin: 20px 0;
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    .card-QuizMat, .card-QuizCal, .card-QuizFis{
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .main{
+        height: 1800px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .card-left{
+        width: 100%;
+        height: 10vh;
+        margin: 15px 0;
+        display: block;
+    }
+
+    .card-left > h1{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card-left > img{
+        display: none;
+    }
+
+    .card-rigth{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .card-QuizMat, .card-QuizCal, .card-QuizFis{
+        width: 75%;
+    }
 }
