@@ -1,6 +1,6 @@
 let respostasMat = ['a','b','b']
 let respostasCal = ['b','b','b']
-let respostasFis = ['a','a','a']
+let respostasFis = ['a','a','c']
 let loop = 1
 let respJog = ['x','x','x']
 let pontos = 0
@@ -72,7 +72,7 @@ function quizFis(gab){
 
         respJog[0] = prompt("1 - O que diz a primeira equação de Maxwell: \na) Existência de campo eletrico a partir de uma carga \nb) Existência de campo magnético a partir de uma carga \nc) Existência da luz").toLowerCase()
         respJog[1] = prompt("2 - Qual o resultado da derivada do Momento linear? \na) 2º lei de Newton \nb) Equação da velocidade \nc) Equação da aceleração").toLowerCase()
-        respJog[2] = prompt("3 - Qual movimento tem aceleração constante? \na) MRU \nb) MRUV \nc) MCUV").toLowerCase()
+        respJog[2] = prompt("3 - A primeira lei de Newton afirma que, se a soma de todas as forças atuando sobre um corpo é zero, ele: \na) Terá um movimento uniformemente variado. \nb) Apresentará velocidade constante. \nc) Apresentará velocidade constante em módulo, mas sua direção pode ser alterada.").toLowerCase()
 
         compararGab(gab);
         
