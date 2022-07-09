@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    color:#9fffff;
+}
+
+.main{
+    display: flex;
+    background: #F2B3CA;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+}
+
+.card-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 80vh;
+}
+
+.card-left > h1{
+    text-align: center;
+    font-size: 2vw;
+    color: #604750;
+}
+
+.card-left > img{
+    width: 50%;
+}
+.card-rigth{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 50vw;
+    height: 80vh;
+    margin-right: 10px;
+    gap: 25px;
+}
+
+.card-QuizMat, .card-QuizCal, .card-QuizFis{
+    border-radius: 20px;
+    width: 30%;
+    height: 75%;
+    padding: 5px;  
+}
+
+.card-QuizMat{
+    background: #F21D56;
+}
+
+.card-QuizCal{
+    background: #2EA6A6;
+}
+
+.card-QuizFis{
+    background: #F2A444;
+}
+
+.card-QuizMat:hover{
+    transition: 0.3s;
+    background: #790e2b;
+}
+
+.card-QuizCal:hover{
+    transition: 0.3s;
+    background: #248484;
+}
+
+.card-QuizFis:hover{
+    transition: 0.3s;
+    background: #a9722f;
+}
+
+.card-QuizMat > h2, .card-QuizCal > h2, .card-QuizFis > h2{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 800;
+    color: white;
+    height: 20px;
+}
+
+.card-QuizMat-content, .card-QuizCal-content, .card-QuizFis-content{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 15px 10px;
+    height: 83%;
+}
+
+.card-QuizMat-content img, .card-QuizCal-content img, .card-QuizFis-content img{
+    width: 100%;
+    height: 35%;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px #00000056;
+    margin: 10px 0;
+}
+
+.card-QuizMat-content > p, .card-QuizCal-content > p, .card-QuizFis-content > p{
+    margin: 0;
+    text-align: justify;
+    line-height: 1.6;
+    color: white;
+}
+
+#cardMat-btn, #cardCal-btn, #cardFis-btn {
+    margin: 25px 0;
+    padding: 12px 0;
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 20px;
+    letter-spacing: 6px;
+    color: white;
+    background: #0F8DBF;
+    cursor: pointer;
+}
