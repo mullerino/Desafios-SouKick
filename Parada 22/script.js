@@ -51,7 +51,7 @@ function quizCalc(gab){
 
     if(nameJogador != null){
         alert("Vamos iniciar o Quiz de Cálculo, se prepare bixin!! \n\nLembre de escrever a letra que corresponde a resposta correta na sua concepção!")
-        respJog[0] = prompt("1 - Qual o resultado da seguinte integral: ∫x^2dx \na) x^2 + c \nb) (x^3/3) \nc) (x^4/6)").toLowerCase()
+        respJog[0] = prompt("1 - Qual o resultado da seguinte integral: ∫x^2dx \na) x^2 + c \nb) (x^3/3) + c \nc) (x^4/6) + c").toLowerCase()
         respJog[1] = prompt("2 - Qual alternativa está relacionada ao conceito de derivada: \na) Multiplicar com soma \nb) Taxa de variação \nc) Soma sob uma área definida ou não").toLowerCase()
         respJog[2] = prompt("3 - Qual alternativa está relacionada ao conceito de integral: \na) Alguma coisa \nb) Soma sob a área de uma função \nc) Subtração sob a área de uma função").toLowerCase()
 
