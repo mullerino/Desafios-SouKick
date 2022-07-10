@@ -83,15 +83,22 @@ function quizFis(gab){
 }
 
 function sairQuiz(){
-    sair = parseInt(prompt("Agora você decide: \n1 - Jogar novamente \n0 - Sair do Quiz"))
-    if(sair == 0){
-        return loop = 0 ;
-    } else if(sair == 1){
-        return loop = 1;
-    } else{
-        alert("Digite um valor válido!!")
+    let aux = 1
+
+    while(aux== 1){
+        sair = parseInt(prompt("Agora você decide: \n1 - Jogar novamente \n0 - Sair do Quiz"))
+        if(sair == 0){
+            aux = 0
+            return loop = 0;
+        } else if(sair == 1){
+            aux= 0
+            return loop = 1;
+        } else{
+            alert("Digite um valor válido!!")
+        }
     }
 }
+
 
 function compararGab(gabarito){
     for(let i =0; i<gabarito.length; i++){
