@@ -6,7 +6,7 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
 
-<img src="" alt="exemplo imagem">
+<img src="interface.png" alt="exemplo imagem">
 
 > O projeto Gerador de nomes tem como objetivo oferecer nomes aleatórios para o usário, além de possibilitar que o usário adicione um novo nome para o array que armaneza os demais nomes.
 
