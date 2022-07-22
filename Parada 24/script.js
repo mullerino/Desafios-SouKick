@@ -1,8 +1,9 @@
 let nomes = ['Leandro','Arthur','Théo','Miguel','Noah','Benjamin','Helena','Alice','Laura','Manuela']
 
 function showName(){
-    let nameShw = parseInt(Math.random()*(nomes.length-1)+1)
-    document.getElementById("nome").innerHTML = "Nome: " + nomes[nameShw]
+    let numbername = parseInt(Math.random()*(nomes.length-1)+1)
+    let showname = document.getElementById("nome").innerHTML = "Nome: " + nomes[numbername]
+    return showname
 }
 
 function adicionarNome(){
