@@ -17,6 +17,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [] Melhorar interface
 - [] Adicionar input para o nome ser adicionado no próprio site/
 
+## 🤝 Colaboradores
 <table>
   <tr>
     <td align="center">
