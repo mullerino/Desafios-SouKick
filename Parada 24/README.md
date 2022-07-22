@@ -27,21 +27,4 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
         </sub>
       </a>
     </td>
-    <td align="center">
-      <a href="#">
-        <img src="" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
-        <sub>
-          <b></b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="#">
-        <img src="" width="100px;" alt="Foto do Steve Jobs"/><br>
-        <sub>
-          <b></b>
-        </sub>
-      </a>
-    </td>
-  </tr>
 </table>
