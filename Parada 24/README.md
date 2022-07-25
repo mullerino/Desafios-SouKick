@@ -11,8 +11,15 @@
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
 - [x] Adicionar mais nomes ao array
-- [] Melhorar interface
-- [] Adicionar input para o nome ser adicionado no próprio site
+- [ ] Melhorar interface
+- [ ] Adicionar input para o nome ser adicionado no próprio site
+
+## 🛠️ Construído com
+
+* [Visual Studio Code](https://code.visualstudio.com/) - Editor de código-fonte utilizado
+* [HTML](http://www.dropwizard.io/1.0.2/docs/) - Usado para a marcação de texto
+* [CSS](https://maven.apache.org/) - Usado para estilizar o projeto
+* [JavaScript](https://rometools.github.io/rome/) - Usado para dar a dinamicidade ao projeto
 
 ## 🤝 Colaboradores
 <table>
@@ -26,3 +33,9 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
       </a>
     </td>
 </table>
+
+## 🎁 Expressões de gratidão
+
+* Conte a outras pessoas sobre este projeto 📢
+* Convide alguém da equipe para uma cerveja 🍺 
+* Obrigado publicamente 🤓.
