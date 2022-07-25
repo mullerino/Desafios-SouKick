@@ -2,7 +2,7 @@
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
-<img src=" ./imgs/interface.png" alt="Imagem da interface">
+<img src="imgs/interface.png" alt="Imagem da interface">
 
 > O projeto Quiz tem como objetivo apresentar 3 temas para testar seus conhecimentos (Matemática, Cálculo e Física), utilizando HTML, CSS e JS. Ao iniciar o Quiz pede-se o nome do jogador e as perguntas são iniciadas e ao fim é mostrado um feedback de quantas perguntas o jogador acertou e sua pontuação.
 
