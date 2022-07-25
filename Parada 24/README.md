@@ -16,10 +16,10 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 ## 🛠️ Construído com
 
-* [Visual Studio Code](https://code.visualstudio.com/) - Editor de código-fonte utilizado
-* [HTML](http://www.dropwizard.io/1.0.2/docs/) - Usado para a marcação de texto
-* [CSS](https://maven.apache.org/) - Usado para estilizar o projeto
-* [JavaScript](https://rometools.github.io/rome/) - Usado para dar a dinamicidade ao projeto
+* [Visual Studio Code](https://code.visualstudio.com/) - Editor de código-fonte
+* [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML) - Usado para a marcação de texto
+* [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) - Usado para estilizar o projeto
+* [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) - Usado para dar a dinamicidade ao projeto
 
 ## 🤝 Colaboradores
 <table>
@@ -38,4 +38,4 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 * Conte a outras pessoas sobre este projeto 📢
 * Convide alguém da equipe para uma cerveja 🍺 
-* Obrigado publicamente 🤓.
+* Obrigado pela visita🤓.
