@@ -2,7 +2,7 @@
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
-<img src="" alt="Imagem da interface">
+<img src="imgs/interface.png" alt="Imagem da interface">
 
 > O projeto Eleições 2022 tem como objetivo criar um sistema que ofereça ao usário a opção de votar no candidato desejado, apresentando eles na interface inicial. Ao entrar no projeto o usário é apresentado aos candidatos disponiveís e em seguida vota no candidato escolhido, ao fim é apresentado quantos votos cada candidato recebeu e quem foi eleito.
 
