@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Formulário</title>
+</head>
+<body>
+    <div class="container">
+        <div id='banner'>
+            <img src="imagens/Banner.jpg" alt="Banner do LOL">
+        </div>
+        <div class="formulario-right">
+            <form action="Cadastro.html" method="post" id="forms" onsubmit=" return validar()">
+                <fieldset id="Info-pessoais">
+                    <legend>Informações pessoais</legend>
+                    <label>Nome</label>
+                    <input required type="text" id="name" class="Digitar" placeholder="Digite seu nome">
+                    <label>Email</label>
+                    <input required type="email" id="email" class="Digitar" placeholder="Digite seu email">
+                    <label>Idade</label>
+                    <input required type="number" id="idade" class="Digitar" placeholder="Digite sua idade">
+                </fieldset>
+                <fieldset id="Info-lol">
+                    <legend>Informações no LOL</legend>
+                    <div class="radios">
+                        <label id="posicao">Posição</label>
+                        <input type="radio" name="posicao" value="Mid" checked>
+                        <label>Mid</label>
+                        <input type="radio" name="posicao" value="Top">
+                        <label>Top</label>
+                        <input type="radio" name="posicao" value="Bot">
+                        <label>Bot</label>
+                        <input type="radio" name="posicao" value="Jungle">
+                        <label>Jungle</label>
+                    </div>
+                    <label id="ultima-p">Qual classe de campeão você gosta de jogar?</label>
+                    <select required name="tipo" id="tipo-select">
+                        <option value="escolha" selected>Selecione uma opção</option>
+                        <option value="Assassino">Assassino</option>
+                        <option value="Mago">Mago</option>
+                        <option value="Lutador">Lutador</option>
+                        <option value="Atirador">Atirador</option>
+                        <option value="Suporte">Controlador ou Suporte</option>
+                        <option value="Tanque">Tanque</option>
+                    </select>
+                    <textarea required placeholder='Conte um pouco da sua experiência com o jogo'></textarea>
+                    <input type="submit" id="btn">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
