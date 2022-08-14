@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url('/assets/Fontes/poppins/Poppins-Medium.ttf') format('truetype');
+    font-family: 'Poppins SemiBold';
+    src: url('/assets/Fontes/poppins/Poppins-SemiBold.ttf') format('truetype');
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #feda00;
+}
+
+.header-logo{
+    width: 110px;
+    margin-top: 10px;
+    margin-right: 100px;
+}
+
+.header-logo img{
+    width: 100%;
+}
+
+.header-navbar{
+    margin: 0 30px;
+}
+
+.header-navbar ul{
+    list-style-type: none;
+    font-size: 22px;
+    font-family: 'Poppins Medium';
+}
+
+.header-navbar li{
+    display: inline;
+    margin: 0 10px;
+    padding: 0 55px;
+}
+
+.header-navbar li a {
+    letter-spacing: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header-navbar li a:hover{
+    border-bottom: 3px solid #ae00fe;
+    transition: border-bottom 0.3s ease-in;
+}
+
+.home-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 805px;
+    background-image: url(/assets/Imagens/possessed-photography-JjGXjESMxOY-unsplash.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+.home-content-left{
+    margin-top: 30px;
+}
+
+.home-content-left h1{
+    font-size: 60px;
+    font-family: 'Poppins SemiBold';
+    text-transform: uppercase;
+    color: white;
+}
+.home-content-left h1:hover{
+    transition: color 0.6s ease;
+    color: #feda00;
+}
+
+
+.home-content-left h2{
+    font-size: 30px;
+    font-family: 'Poppins SemiBold';
+    text-transform: uppercase;
+    color: white;
+}
+
+.home-content-left button{
+    border-radius: 30px;
+    padding: 20px 50px;
+    margin: 25px 0;
+    border: none;
+    font-size: 21px;
+    font-family: 'Poppins SemiBold';
+    background: #FFFFFF;
+    box-shadow: 10px 8px 40px rgba(245, 116, 21, 0.52);
+    cursor: pointer;
+}
+
+.home-content-left button:hover{
+    transition: background-color 0.4s ease-in, transform 0.3s ease-out;;
+    background-color: #feda00;
+    transform: scale(1.1);
+}
+
+.home-content-right-carrosel{
+    margin-top: 20px;
+    height: 600px;
+    position: relative;
+}
+
+.prox, .voltar{
+    font-size: 18px;
+    position: absolute;
+    color: white;
+    width: auto;
+    padding: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    top: 50%;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.4s ease-in;
+}
+
+.prox{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prox:hover, .voltar:hover{
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.home-content-right-carrosel .slide{
+    height: 100%;
+}
+
+.slide img{
+    border-radius: 30px;
+    height: 100%;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.6s;
+}
+
+@keyframes fade{
+    from {opacity: .8;}
+    to {opacity: 1;}
+
+    from {
+        margin-left: 3%;
+      }
+    
+      to {
+        margin-left: 0%;
+    }
+}
+
+
+

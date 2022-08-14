@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MARIA</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <div class="header-logo">
+                    <img src="/assets/Imagens/logo-fundoamarelo.png">
+                </div>
+                <nav class="header-navbar">
+                    <ul>
+                        <li><a>HOME</a></li>
+                        <li><a>SOBRE NÓS</a></li>
+                        <li><a>PROJETOS</a></li>
+                        <li><a>CONTATO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="home-content">
+            <div class="home-content-left">
+                <h1>Olá, bem vindo ao MARIA</h1>
+                <h2>Somos o laboratório de robótica do IFRN-campus <br> Natal Zona Norte</h2>
+                <button>CONHEÇA MAIS</button>
+            </div>
+            <div class="home-content-right-carrosel">
+                <div class="slide fade">
+                    <img src="/assets/Imagens/Sobre-carrosel/index-ft1_auto_x2.jpg" alt="MARIA na OBR 2018">
+                </div>
+                <div class="slide fade">
+                    <img src="/assets/Imagens/Sobre-carrosel/projeto-1.jpg" alt="">
+                </div>
+                <div class="slide fade">
+                    <img src="/assets/Imagens/Sobre-carrosel/noticias-ft2.jpg" alt="">
+                </div>
+                <a class="voltar" onclick="passarSlide(-1)">❮</a>
+                <a class="prox" onclick="passarSlide(1)">❯</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let slidePos = 1;
+        let teste = 1;
+        let habAut = 0;
+
+        mostrarSlide(slidePos)
+
+        function mostrarSlide(n){
+            let slides = document.getElementsByClassName("slide")
+
+            if(n>slides.length){
+                slidePos = 1;
+            }
+
+            if(n<=0){
+                slidePos = slides.length;
+            }
+
+            for(let i =0; i<slides.length;i++){
+                slides[i].style.display = 'none'
+            }
+
+            slides[slidePos-1].style.display = 'block'
+            
+        }
+
+        function passarSlide(n){
+            habAut = 1
+            mostrarSlide(slidePos+=n)
+            habAut = 0
+        }
+
+        function passarSlideAut(){
+            let slides = document.getElementsByClassName("slide")
+
+            if(teste>slides.length){
+                teste = 1;
+            }
+
+            if(teste<=0){
+                teste = slides.length;
+            }
+
+            for(let i =0; i<slides.length;i++){
+                slides[i].style.display = 'none'
+            }
+
+            slides[teste-1].style.display = 'block'
+
+            teste+=1
+        }
+
+        if(habAut == 0){
+            setInterval(passarSlideAut,4500)
+        }
+        
+    </script>
+</body>
+</html>
