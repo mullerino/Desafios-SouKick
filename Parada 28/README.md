@@ -2,7 +2,7 @@
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
-<img src="/assets/Imagens/interface.png" alt="exemplo imagem">
+<img src="interface.png" alt="Interface do projeto">
 
 > O projeto tem como objetivo criar um carrosel de imagens utilizando HTML, CSS e JS. Foi criado uma interface inicial que será utilizada posteriormente no desafio final do módulo 2 da jornada.
 
