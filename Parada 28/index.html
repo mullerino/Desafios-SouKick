@@ -45,63 +45,6 @@
             </div>
         </section>
     </div>
-
-    <script>
-        let slidePos = 1;
-        let teste = 1;
-        let habAut = 0;
-
-        mostrarSlide(slidePos)
-
-        function mostrarSlide(n){
-            let slides = document.getElementsByClassName("slide")
-
-            if(n>slides.length){
-                slidePos = 1;
-            }
-
-            if(n<=0){
-                slidePos = slides.length;
-            }
-
-            for(let i =0; i<slides.length;i++){
-                slides[i].style.display = 'none'
-            }
-
-            slides[slidePos-1].style.display = 'block'
-            
-        }
-
-        function passarSlide(n){
-            habAut = 1
-            mostrarSlide(slidePos+=n)
-            habAut = 0
-        }
-
-        function passarSlideAut(){
-            let slides = document.getElementsByClassName("slide")
-
-            if(teste>slides.length){
-                teste = 1;
-            }
-
-            if(teste<=0){
-                teste = slides.length;
-            }
-
-            for(let i =0; i<slides.length;i++){
-                slides[i].style.display = 'none'
-            }
-
-            slides[teste-1].style.display = 'block'
-
-            teste+=1
-        }
-
-        if(habAut == 0){
-            setInterval(passarSlideAut,4500)
-        }
-        
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
