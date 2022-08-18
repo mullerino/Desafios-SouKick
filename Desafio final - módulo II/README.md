@@ -4,14 +4,20 @@
 
 <img src="interface.png" alt="Interface do projeto">
 
-> O projeto tem como objetivo criar um carrosel de imagens utilizando HTML, CSS e JS. Foi criado uma interface inicial que será utilizada posteriormente no desafio final do módulo 2 da jornada.
+> O projeto tem como objetivo desenvolver um site para o laboratório de robótica MARIA utilizando HTML, CSS e JS, sendo uma continuação do projeto disponibilizado na parada 28.
 
 ### Ajustes e melhorias
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [ ] Implementar uma animação no hover dos itens do menu
-- [ ] Mudar background
+- [x] Implementar uma animação no hover dos itens do menu
+- [x] Criar a sessão Sobre nós
+- [x] Criar cards da sessão Projetos
+- [x] Criar a sessão Contato
+- [ ] Criar a sessão Footer
+- [ ] Fazer carrosel do sobre nós
+- [ ] Inserir animações e efeitos nas sessões
+- [ ] Criar a caixa de confirmação de envio do formulário
 
 ## 🛠️ Construído com
 
