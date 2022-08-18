@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MARIA</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <div class="header-logo">
+                    <img src="/assets/Imagens/logo-fundoamarelo.png">
+                </div>
+                <nav class="header-navbar">
+                    <ul>
+                        <li id="home"><a href="#">HOME</a></li>
+                        <li id="sobre"><a href="#">SOBRE NÓS</a></li>
+                        <li id="projetos"><a href="#">PROJETOS</a></li>
+                        <li id="contato"><a href="#">CONTATO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="home-content">
+            <div class="home-content-left surgir">
+                <h1>Olá, bem vindo ao MARIA</h1>
+                <h2>Somos o laboratório de robótica do IFRN-campus <br> Natal Zona Norte</h2>
+                <button>CONHEÇA MAIS</button>
+            </div>
+            <div class="home-content-right-carrosel">
+                <div class="slide fade">
+                    <img src="/assets/Imagens/Sobre-carrosel/index-ft1_auto_x2.jpg" alt="MARIA na OBR 2018">
+                </div>
+                <div class="slide fade">
+                    <img src="/assets/Imagens/Sobre-carrosel/projeto-1.jpg" alt="">
+                </div>
+                <div class="slide fade">
+                    <img src="/assets/Imagens/Sobre-carrosel/noticias-ft2.jpg" alt="">
+                </div>
+                <a class="voltar" onclick="passarSlide(-1)">❮</a>
+                <a class="prox" onclick="passarSlide(1)">❯</a>
+            </div>
+        </section>
+        <section class="sobre">
+            <h1>SOBRE NÓS</h1>
+            <div class="sobre-content">
+                <div class="sobre-content-left">
+                    <img src="/assets/Imagens/zyro-image.png" alt="Sobre nós">
+                </div>
+                <div class="sobre-content-right">
+                    <h2>MARIA<img src="/assets/Imagens/Icones/Icone-sobrenós.png"></img></h2>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                    <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                </div>
+            </div>
+        </section>
+        <section class="projetos">
+            <h1>PROJETOS</h1>
+            <div class="projetos-cards">
+                <div class="projetos-cards-MAAP">
+                    <div class="card-MAAP-img">
+                        <img src="/assets/Imagens/Projetos/IMG-20191109-WA0026.jpg">
+                    </div>
+                    <div class="card-MAAP-text">
+                        <h2>Maria Abre as Portas</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <img src="/assets/Imagens/Icones/Icone-projetos-maap.png">
+                    </div>
+                </div>
+                <div class="projetos-cards-MAAP">
+                    <div class="card-MAAP-img">
+                        <img src="/assets/Imagens/Oficinas/projetos-oficinas.jpg">
+                    </div>
+                    <div class="card-MAAP-text">
+                        <h2>Oficinas do MARIA</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <img src="/assets/Imagens/Icones/Icone-projetos-oficinas.png">
+                    </div>
+                </div>
+                <div class="projetos-cards-MAAP">
+                    <div class="card-MAAP-img">
+                        <img src="/assets/Imagens/Oficinas/projetos-apresentando.jpg">
+                    </div>
+                    <div class="card-MAAP-text">
+                        <h2>Apresentando o MARIA</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <img src="/assets/Imagens/Icones/icones-projetos-apresentando.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contatos">
+            <h1>CONTATO</h1>
+            <div class="contatos-container">
+                <div class="contatos-left">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=ifrn campus natal zona norte&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="contatos-right">
+                    <h2>FALE CONOSCO</h2>
+                    <form action="" method="post" id="form">
+                        <input type="text" name="" id="nome" placeholder="Seu nome">
+                        <input type="email" name="" id="email" placeholder="Seu email">
+                        <textarea name="" id="mensagem" cols="30" rows="10" placeholder="Deixe sua mensagem"></textarea>
+                        <button type="submit" id="btn">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>  
+        <footer class="rodape">
+            <div class="redes">
+                
+            </div>
+            <nav class="header-navbar">
+                <ul>
+                    <li id="home"><a href="#">HOME</a></li>
+                    <li id="sobre"><a href="#">SOBRE NÓS</a></li>
+                    <li id="projetos"><a href="#">PROJETOS</a></li>
+                    <li id="contato"><a href="#">CONTATO</a></li>
+                </ul>
+            </nav>
+            <p>Todos os direitos reservados 2022</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

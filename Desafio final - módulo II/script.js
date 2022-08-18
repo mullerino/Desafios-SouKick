@@ -1,5 +1,6 @@
 let slidePos = 1;
 let slidePosAut = 1;
+let habAut = 0;
 var tempo = null
 
 mostrarSlide(slidePos)
@@ -25,6 +26,7 @@ function mostrarSlide(n){
 }
 
 function passarSlide(n){
+    habAut = 1
     clearTimeout(tempo)
     mostrarSlide(slidePos+=n)
     tempo = setTimeout(passarSlideAut,null)
@@ -49,5 +51,5 @@ function passarSlideAut(){
 
     slidePosAut+=1
 
-    tempo = setTimeout(passarSlideAut,2000)
+    tempo = setTimeout(passarSlideAut,4500)
 }
