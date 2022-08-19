@@ -1,12 +1,12 @@
 let slidePos = 1;
 let slidePosAut = 1;
-let habAut = 0;
-var tempo = null
+let slideAut
 
 mostrarSlide(slidePos)
-passarSlideAut(slidePosAut)
+slideAut = setInterval(passarSlideAut,4500)
 
 function mostrarSlide(n){
+    let pontos = document.getElementsByClassName("ponto")
     let slides = document.getElementsByClassName("slide")
 
     if(n>slides.length){
@@ -21,18 +21,22 @@ function mostrarSlide(n){
         slides[i].style.display = 'none'
     }
 
+    for(let i =0; i<pontos.length;i++){
+        pontos[i].className = pontos[i].className.replace('active','')
+    }
+
+    pontos[slidePos-1].className += ' active'
     slides[slidePos-1].style.display = 'block'
-    
 }
 
 function passarSlide(n){
-    habAut = 1
-    clearTimeout(tempo)
+    clearInterval(slideAut)
     mostrarSlide(slidePos+=n)
-    tempo = setTimeout(passarSlideAut,null)
+    slideAut = setInterval(passarSlideAut,4500)
 }
 
 function passarSlideAut(){
+    let pontos = document.getElementsByClassName("ponto")
     let slides = document.getElementsByClassName("slide")
 
     if(slidePosAut>slides.length){
@@ -47,9 +51,14 @@ function passarSlideAut(){
         slides[i].style.display = 'none'
     }
 
+    for(let i =0; i<pontos.length;i++){
+        pontos[i].className = pontos[i].className.replace('active','')
+    }
+
+    pontos[slidePosAut-1].className += ' active'
     slides[slidePosAut-1].style.display = 'block'
 
     slidePosAut+=1
-
-    tempo = setTimeout(passarSlideAut,4500)
 }
+
+

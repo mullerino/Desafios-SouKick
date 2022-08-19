@@ -28,6 +28,7 @@ body{
     padding: 0;
 }
 
+
 .header-container{
     display: flex;
     align-items: center;
@@ -68,63 +69,32 @@ body{
     text-align: center;
     padding: 0 3px;
     color: black;
+    position: relative;
 }
 
-#home a:hover::after{
+.header-navbar a:hover{
+    color: rgba(0, 0, 0, 0.75);
+    transition: color .6s ease-in-out;
+}
+
+.header-navbar li a:hover::after{
     content: '';
-    width: 110px;
     height: 3px;
+    width: 100%;
     position: absolute;
-    top: 96px;
-    left: 38%;
+    top: 100%;
+    left: -2%;
     background-color: #2c0e70;
-    transition: surgir-home 1.5s ease-in;
-    animation-name: surgir-home;
+    transition: deslocando 0.7s ease-in;
+    animation-name: deslocando;
     animation-duration: 1.5s;
 }
 
-#sobre a:hover::after{
-    content: '';
-    width: 170px;
-    height: 3px;
-    position: absolute;
-    top: 96px;
-    left: 50.1%;
-    background-color: #2c0e70;
-    transition: surgir-sobre 1.5s ease-in;
-    animation-name: surgir-sobre;
-    animation-duration: 1.5s;
-}
-
-#projetos a:hover::after{
-    content: '';
-    width: 170px;
-    height: 3px;
-    position: absolute;
-    top: 96px;
-    left: 65.2%;
-    background-color: #2c0e70;
-    transition: surgir-projetos 1.5s ease-in;
-    animation-name: surgir-projetos;
-    animation-duration: 1.5s;
-}
-
-#contato a:hover::after{
-    content: '';
-    width: 150px;
-    height: 3px;
-    position: absolute;
-    top: 96px;
-    left: 80.3%;
-    background-color: #2c0e70;
-    transition: surgir-contato 1.5s ease-in;
-    animation-name: surgir-contato;
-    animation-duration: 1.5s;
-}
-
-@keyframes surgir-home{
+@keyframes deslocando{
     0%{
-        left: 33%;
+        margin-left: 47%;
+        width: 1px;
+        transform: translateX(-15px);
         background-color: #feda00;
     }
     25%{
@@ -137,68 +107,11 @@ body{
         background-color: #23095c;
     }
     100%{
-        left: 38%;
+        margin-left: 0;
+        width: 100%;
+        transform: translateX(0px);
         background-color: #2c0e70;
-    }
-}
-
-@keyframes surgir-sobre{
-    0%{
-        left: 47.5%;
-        background-color: #feda00;
-    }
-    25%{
-        background-color: #f0d32e;
-    }
-    50%{
-        background-color: #bba41f;
-    }
-    75%{
-        background-color: #23095c;
-    }
-    100%{
-        left: 50.1%;
-        background-color: #2c0e70;
-    }
-}
-
-@keyframes surgir-projetos{
-    0%{
-        left: 61%;
-        background-color: #feda00;
-    }
-    25%{
-        background-color: #f0d32e;
-    }
-    50%{
-        background-color: #bba41f;
-    }
-    75%{
-        background-color: #23095c;
-    }
-    100%{
-        left: 65.2%;
-        background-color: #2c0e70;
-    }
-}
-
-@keyframes surgir-contato{
-    0%{
-        left: 77%;
-        background-color: #feda00;
-    }
-    25%{
-        background-color: #f0d32e;
-    }
-    50%{
-        background-color: #bba41f;
-    }
-    75%{
-        background-color: #23095c;
-    }
-    100%{
-        left: 80.3;
-        background-color: #2c0e70;
+        color: rgba(0, 0, 0, 0.75);
     }
 }
 
@@ -296,6 +209,21 @@ body{
     border-radius: 0 3px 3px 0;
     user-select: none;
     transition: 0.4s ease-in;
+}
+
+.ponto{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 7px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.4s ease-out;
+}
+
+.ponto:hover, .active{
+    background-color: #717171;;
 }
 
 .prox{
@@ -526,6 +454,11 @@ input, textarea{
     font-family: 'Poppins Medium';
 }
 
+input:hover, textarea:hover{
+    background-color: rgb(233, 236, 232);
+    transition: background-color .5s ease-out;
+}
+
 input::placeholder, textarea::placeholder{
     font-size: 17px;
     font-family: 'Poppins Medium';
@@ -569,4 +502,148 @@ input::placeholder, textarea::placeholder{
     font-size: 20px;
     letter-spacing: 3px;
     border-radius: 35px;
+    cursor: pointer;
+}
+
+#btn:hover{
+    background-color: rgb(17, 20, 15);
+    color: white;
+    transition: background-color .5s ease-out, color .3s ease-out;
+}
+
+.rodape{
+    background-color: #feda00;
+    height: 220px;
+    margin: 0;
+}
+
+.redes{
+    margin-top: 0;
+    height: 65px;
+}
+
+.redes ul{
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding-top: 25px;
+}
+
+.redes ul li{
+    position: relative;
+    margin: 0 20px;
+    cursor: pointer;
+    display: inline;
+    height: 3em;
+}
+
+.redes ul li a{
+    text-decoration: none;
+}
+
+ul li a .fa-brands{
+    font-size: 3em;
+    color: #222;
+}
+
+.redes ul li a::before{
+    content: '';
+    font-family: "FontAwesome";
+    position: absolute;
+    top: -28px;
+    left: 0;
+    font-size: 3em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.8s ease-in-out;
+}
+
+.redes ul li:nth-child(1) a::before {
+    content: "\f16d";
+    background-image: linear-gradient(45deg, 
+      #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,
+      #bc1888 100%);
+    -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+    border-bottom: 4px solid #dc2743;
+  }
+
+.redes ul li:nth-child(2) a::before {
+    content: "\f082";
+    color: #3b5998;
+    border-bottom: 4px solid #3b5998;
+  }
+  
+.redes ul li:nth-child(3) a::before {
+    content: "\f08c";
+    color: #0e76a8;
+    border-bottom: 4px solid #0e76a8;
+  }
+
+.redes ul li:hover a::before {
+    height: 49px;
+  }
+
+.navbar ul{
+    list-style-type: none;
+    font-size: 22px;
+    font-family: 'Poppins Medium';
+    text-align: center;
+    margin-top: 35px;
+}
+
+.navbar ul li{
+    display: inline;
+    margin: 0 10px;
+    padding: 0 55px;
+}
+
+.navbar ul li a{
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar li a:hover::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    background-color: #23095c;
+    top: 100%;
+    left: -2%;
+    width: 100%;
+    transition: deslocar .6s ease;
+    animation: deslocar 1.5s 1;
+}
+
+@keyframes deslocar{
+    0%{
+        width: 1px;
+        transform: translateX(-20px);
+        background-color: #feda00;
+    }
+    25%{
+        background-color: #f0d32e;
+    }
+    50%{
+        background-color: #bba41f;
+    }
+    75%{
+        background-color: #23095c;
+    }
+    100%{
+        width: 100%;
+        transform: translateX(0px);
+        background-color: #23095c;
+    }
+}
+
+.rodape p{
+    font-family: 'Poppins Medium';
+    font-size: 22px;
+    margin: 35px 0;
+    padding: 0;
+    text-align: center;
 }
