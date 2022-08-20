@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>MARIA</title>
     <link rel="shortcut icon" href="/assets/Imagens/Icones/favicon-32x32.png" type="image/x-icon">
 </head>
@@ -45,23 +46,37 @@
                 <a class="voltar" onclick="passarSlide(-1)">❮</a>
                 <a class="prox" onclick="passarSlide(1)">❯</a>
                 <div style="text-align: center;">
-                    <span class="ponto" onclick="passarSlide(0)"></span>
-                    <span class="ponto" onclick="passarSlide(1)"></span>
-                    <span class="ponto" onclick="passarSlide(2)"></span>
+                    <span class="ponto" onclick="passarSlidePonto(1)"></span>
+                    <span class="ponto" onclick="passarSlidePonto(2)"></span>
+                    <span class="ponto" onclick="passarSlidePonto(3)"></span>
                 </div>
             </div>
         </section>
         <section class="sobre">
             <h1>SOBRE NÓS</h1>
-            <div class="sobre-content">
-                <div class="sobre-content-left">
-                    <img src="/assets/Imagens/zyro-image.png" alt="Sobre nós">
+            <div class="sobre-content-carrosel">
+                <div class="sobre-card pass">
+                    <div class="sobre-content-left">
+                        <img src="/assets/Imagens/zyro-image.png" alt="Sobre nós">
+                    </div>
+                    <div class="sobre-content-right">
+                        <h2>MARIA<img src="/assets/Imagens/Icones/Icone-sobrenós.png"></img></h2>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                    </div>
                 </div>
-                <div class="sobre-content-right">
-                    <h2>MARIA<img src="/assets/Imagens/Icones/Icone-sobrenós.png"></img></h2>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-                    <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                <div class="sobre-card pass">
+                    <div class="sobre-content-left-02">
+                        <img src="/assets/Imagens/Sobre_nos/principios.png" alt="Valores do MARIA">
+                    </div>
+                    <div class="sobre-content-right-02">
+                        <h2>Valores do MARIA<img src="/assets/Imagens/Icones/value.png"></img></h2>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                    </div>
                 </div>
+                <a class="voltar-sobre" onclick="passarSlideSobre(-1)">❮</a>
+                <a class="proximo-sobre" onclick="passarSlideSobre(1)">❯</a>
             </div>
         </section>
         <section class="projetos">
@@ -111,10 +126,13 @@
                 </div>
                 <div class="contatos-right">
                     <h2>FALE CONOSCO</h2>
-                    <form action="" method="post" id="form">
-                        <input type="text" name="" id="nome" placeholder="Seu nome">
-                        <input type="email" name="" id="email" placeholder="Seu email">
-                        <textarea name="" id="mensagem" cols="30" rows="10" placeholder="Deixe sua mensagem"></textarea>
+                    <form action="https://api.staticforms.xyz/submit" method="post" id="form">
+                        <input type="hidden" name="accessKey" value="70e2e66f-bda3-40ce-8973-6375834368ee">
+                        <input type="hidden" name="subject" value="Formulário de mensagem">
+                        <input type="text" name="name" id="nome" placeholder="Seu nome" required>
+                        <input type="email" name="email" id="email" placeholder="Seu email" required>
+                        <textarea name="message" id="mensagem" cols="30" rows="10" placeholder="Deixe sua mensagem" required></textarea>
+                        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/">
                         <button type="submit" id="btn">Enviar</button>
                     </form>
                 </div>

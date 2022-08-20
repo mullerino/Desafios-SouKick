@@ -1,9 +1,11 @@
 let slidePos = 1;
 let slidePosAut = 1;
 let slideAut
+let slidePosSobre = 1
 
 mostrarSlide(slidePos)
 slideAut = setInterval(passarSlideAut,4500)
+mostrarSlideSobre(slidePosSobre)
 
 function mostrarSlide(n){
     let pontos = document.getElementsByClassName("ponto")
@@ -35,6 +37,12 @@ function passarSlide(n){
     slideAut = setInterval(passarSlideAut,4500)
 }
 
+function passarSlidePonto(n){
+    clearInterval(slideAut)
+    mostrarSlide(slidePos=n)
+    slideAut = setInterval(passarSlideAut,4500)
+}
+
 function passarSlideAut(){
     let pontos = document.getElementsByClassName("ponto")
     let slides = document.getElementsByClassName("slide")
@@ -61,4 +69,25 @@ function passarSlideAut(){
     slidePosAut+=1
 }
 
+function mostrarSlideSobre(n){
+    let slidesSobre = document.getElementsByClassName('sobre-card');
+
+    if(n>slidesSobre.length){
+        slidePosSobre = 1;
+    }
+
+    if(n<=0){
+        slidePosSobre = slidesSobre.length
+    }
+
+    for(let i = 0; i<slidesSobre.length; i++){
+        slidesSobre[i].style.display = 'none'
+    }
+
+    slidesSobre[slidePosSobre-1].style.display = 'flex'
+}
+
+function passarSlideSobre(n){
+    mostrarSlideSobre(slidePosSobre+=n)
+}
 
