@@ -2,6 +2,7 @@ let slidePos = 1;
 let slidePosAut = 1;
 let slideAut
 let slidePosSobre = 1
+const forms = document.getElementById('form')
 
 mostrarSlide(slidePos)
 slideAut = setInterval(passarSlideAut,4500)
@@ -90,4 +91,16 @@ function mostrarSlideSobre(n){
 function passarSlideSobre(n){
     mostrarSlideSobre(slidePosSobre+=n)
 }
+
+function confirmarEnvio(){
+    let caixa = document.getElementsByClassName('caixa-confirm')
+    let corFundo = document.getElementsByClassName('bg')
+    let opacityMap = document.getElementsByClassName('mapouter')
+
+    corFundo[0].style.display = 'block'
+    caixa[0].style.display = 'block'
+    caixa[0].style.opacity = '1'
+    opacityMap[0].style.opacity = '0.5'
+}
+
 

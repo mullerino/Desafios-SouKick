@@ -535,6 +535,14 @@ body{
     font-size: 40px;
 }
 
+.bg{
+    background-color: rgba(0,0,0,.4); 
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    display: none;
+}
+
 .contatos-container{
     display: flex;
     width: 1200px;
@@ -542,6 +550,7 @@ body{
     background-color: #feda00;
     margin: auto;
     border-radius: 35px;
+    position: relative;
 }
 
 .contatos-left{
@@ -649,6 +658,50 @@ input::placeholder, textarea::placeholder{
     background-color: rgb(17, 20, 15);
     color: white;
     transition: background-color .5s ease-out, color .3s ease-out;
+}
+
+.caixa-confirm{
+    width: 260px;
+    height: 195px;
+    background-color: #fffefafc;
+    position: absolute;
+    left: 40%;
+    top: 35%;
+    display: none;
+    text-align: center;
+    border-radius: 20px;
+    font-family: 'Poppins Medium';
+}
+
+.caixa-confirm h3{
+    font-size: 22px;
+    position: relative;
+}
+
+.icone-confirm{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.caixa-confirm button{
+    padding: 8px 35px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 35px;
+    border: none;
+    background-color: #f0d32e;
+    font-family: 'Poppins Medium';
+    cursor: pointer;
+}
+
+.caixa-confirm button:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in;
+}
+
+.caixa-logo{
+    position: absolute;
+    bottom: 0;
 }
 
 .rodape{

@@ -53,7 +53,7 @@
             </div>
         </section>
         <section class="sobre">
-            <h1>SOBRE NÓS</h1>
+            <h1 class="shake">SOBRE NÓS</h1>
             <div class="sobre-content-carrosel">
                 <div class="sobre-card pass">
                     <div class="sobre-content-left">
@@ -80,7 +80,7 @@
             </div>
         </section>
         <section class="projetos">
-            <h1>PROJETOS</h1>
+            <h1 class="shake">PROJETOS</h1>
             <div class="projetos-cards">
                 <div class="projetos-cards-MAAP">
                     <div class="card-MAAP-img">
@@ -115,7 +115,8 @@
             </div>
         </section>
         <section class="contatos">
-            <h1>CONTATO</h1>
+            <div class="bg"></div>
+            <h1 class="shake">CONTATO</h1>
             <div class="contatos-container">
                 <div class="contatos-left">
                     <div class="mapouter">
@@ -132,8 +133,14 @@
                         <input type="text" name="name" id="nome" placeholder="Seu nome" required>
                         <input type="email" name="email" id="email" placeholder="Seu email" required>
                         <textarea name="message" id="mensagem" cols="30" rows="10" placeholder="Deixe sua mensagem" required></textarea>
-                        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/">
-                        <button type="submit" id="btn">Enviar</button>
+                        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/obrigado.html">
+                        <button type="button" id="btn" value="Submit" onclick="confirmarEnvio()">Enviar</button>
+                        <div class="caixa-confirm">
+                            <div class="icone-confirm"><img src="/assets/Imagens/Icones/Icone-confirm.png" alt=""></div>
+                            <h3>Mensagem enviada</h3>
+                            <button type="submit" id="btn-voltar" value="Submit">Voltar</button>
+                            <div class="caixa-logo"><img src="/assets/Imagens/logo-fundoamarelo-removebg-preview 1.png" alt=""></div>
+                        </div>
                     </form>
                 </div>
             </div>
