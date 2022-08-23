@@ -19,6 +19,11 @@
     src: url('/assets/Fontes/Retroica.ttf') format('truetype');
 }
 
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -27,7 +32,6 @@ body{
     margin: 0;
     padding: 0;
 }
-
 
 .header-container{
     display: flex;
@@ -40,6 +44,11 @@ body{
     width: 110px;
     margin-top: 10px;
     margin-right: 100px;
+}
+
+.header-logo:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in;
 }
 
 .header-logo img{
@@ -283,28 +292,23 @@ body{
     transition: color .7s ease;
 }
 
-.sobre h1:hover::after{
+.sobre h1:hover::after, .sobre h1:hover::before{
     content: '';
     width: 200px;
     height: 4px;
     position: absolute;
     top: 81px;
-    left: 56%;
-    background-color: #f0d32e;
     transition: surgir-h1 .3s ease;
     animation: surgir-h1 1.2s 1;
+    background-color: #f0d32e;
 }
 
 .sobre h1:hover::before{
-    content: '';
-    width: 200px;
-    height: 4px;
-    position: absolute;
-    top: 81px;
     left: 33%;
-    background-color: #f0d32e;
-    transition: surgir-h1 .3s ease;
-    animation: surgir-h1 1.2s 1;
+}
+
+.sobre h1:hover::after{
+    left: 56%;
 }
 
 @keyframes surgir-h1{
@@ -331,7 +335,7 @@ body{
 }
 
 .sobre-card{
-    display: flex; /*flex*/
+    display: flex;
     background-color: #000000;
     width: 1350px;
     height: 560px;
@@ -457,7 +461,8 @@ body{
 
 .projetos{
     background-color: #feda00;
-    height: 1000px;
+    height: 1100px;
+    position: relative;
 }
 
 .projetos h1{
@@ -468,6 +473,46 @@ body{
     padding-bottom: 85px;
     font-family: 'Built Titling BD';
     font-size: 40px;
+}
+
+.projetos h1:hover{
+    color: rgba(0, 0, 0, 0.78);
+    transition: color .5s ease-in;
+}
+
+.projetos h1:hover::before, .projetos h1:hover::after{
+    background-color: #030300;
+    content: '';
+    width: 200px;
+    height: 4px;
+    position: absolute;
+    top: 81px;
+    transition: surgir-h1-p .3s ease;
+    animation: surgir-h1-p 1.2s 1;
+}
+
+.projetos h1:hover::before{
+    left: 34%;
+}
+
+.projetos h1:hover::after{
+    left: 55.5%;
+}
+
+@keyframes surgir-h1-p{
+    0%{
+        margin-left: 30px;
+        margin-top: -12px;
+        background-color: #f0d32e;
+    }
+    50%{
+        background-color: #8f8931;
+    }
+    100%{
+        margin-left: 0;
+        margin-top: 0;
+        background-color: #191200;
+    }
 }
 
 .projetos-cards{
@@ -481,6 +526,30 @@ body{
     background-color: #191200;
     color: white;
     border-radius: 100px;
+}
+
+.projetos-cards-MAAP:hover{
+    transform: scale(1.06);
+    transition: transform .5s ease-in;
+}
+
+.projetos-cards-MAAP:hover .girar-icon{
+    -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 1.5s linear infinite;
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform: rotate(360deg); 
+    } 
 }
 
 .card-MAAP-img{
@@ -661,11 +730,11 @@ input::placeholder, textarea::placeholder{
 }
 
 .caixa-confirm{
-    width: 260px;
-    height: 195px;
-    background-color: #fffefafc;
+    width: 380px;
+    height: 215px;
+    background-color: #585040;
     position: absolute;
-    left: 40%;
+    left: 35%;
     top: 35%;
     display: none;
     text-align: center;
@@ -674,8 +743,9 @@ input::placeholder, textarea::placeholder{
 }
 
 .caixa-confirm h3{
-    font-size: 22px;
+    font-size: 25px;
     position: relative;
+    color: #fffefafc;
 }
 
 .icone-confirm{
@@ -684,14 +754,15 @@ input::placeholder, textarea::placeholder{
 }
 
 .caixa-confirm button{
-    padding: 8px 35px;
-    font-size: 14px;
+    padding: 7px 35px;
+    font-size: 18px;
     text-align: center;
     border-radius: 35px;
     border: none;
     background-color: #f0d32e;
     font-family: 'Poppins Medium';
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .caixa-confirm button:hover{
@@ -702,6 +773,7 @@ input::placeholder, textarea::placeholder{
 .caixa-logo{
     position: absolute;
     bottom: 0;
+    left: 6px;
 }
 
 .rodape{
@@ -839,4 +911,14 @@ ul li a .fa-brands{
     margin: 35px 0;
     padding: 0;
     text-align: center;
+}
+
+#home, #sobre, #projetos, #contato, #footer{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: 0;
+    margin-top: 6px; /* esse valor varia de acordo com a altura do seu Header, se ele tiver 200px de altura coloque aqui -220px por exemplo */
+    background-color: transparent;
+    z-index: -1;
 }

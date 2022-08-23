@@ -8,21 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>MARIA</title>
-    <link rel="shortcut icon" href="/assets/Imagens/Icones/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/Imagens/logo-fundoamarelo-removebg-preview 1.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
-        <header>
+        <div id="home"></div>
+        <header id="header">
             <div class="header-container">
                 <div class="header-logo">
                     <img src="/assets/Imagens/logo-fundoamarelo.png">
                 </div>
                 <nav class="header-navbar">
                     <ul>
-                        <li id="home"><a href="#">HOME</a></li>
-                        <li id="sobre"><a href="#">SOBRE NÓS</a></li>
-                        <li id="projetos"><a href="#">PROJETOS</a></li>
-                        <li id="contato"><a href="#">CONTATO</a></li>
+                        <li id="homes"><a href="#home">HOME</a></li>
+                        <li id="sobres"><a href="#sobre">SOBRE NÓS</a></li>
+                        <li id="projetoss"><a href="#projetos">PROJETOS</a></li>
+                        <li id="contatoss"><a href="#contato">CONTATO</a></li>
                     </ul>
                 </nav>
             </div>
@@ -52,8 +53,9 @@
                 </div>
             </div>
         </section>
+        <div id="sobre"></div>
         <section class="sobre">
-            <h1 class="shake">SOBRE NÓS</h1>
+            <h1>SOBRE NÓS</h1>
             <div class="sobre-content-carrosel">
                 <div class="sobre-card pass">
                     <div class="sobre-content-left">
@@ -79,8 +81,9 @@
                 <a class="proximo-sobre" onclick="passarSlideSobre(1)">❯</a>
             </div>
         </section>
+        <div id="projetos"></div>
         <section class="projetos">
-            <h1 class="shake">PROJETOS</h1>
+            <h1>PROJETOS</h1>
             <div class="projetos-cards">
                 <div class="projetos-cards-MAAP">
                     <div class="card-MAAP-img">
@@ -89,7 +92,7 @@
                     <div class="card-MAAP-text">
                         <h2>Maria Abre as Portas</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <img src="/assets/Imagens/Icones/Icone-projetos-maap.png">
+                        <img class="girar-icon" src="/assets/Imagens/Icones/Icone-projetos-maap.png">
                     </div>
                 </div>
                 <div class="projetos-cards-MAAP">
@@ -99,21 +102,22 @@
                     <div class="card-MAAP-text">
                         <h2>Oficinas do MARIA</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <img src="/assets/Imagens/Icones/Icone-projetos-oficinas.png">
+                        <img class="girar-icon" src="/assets/Imagens/Icones/Icone-projetos-oficinas.png">
                     </div>
                 </div>
-                <div class="projetos-cards-MAAP">
+                <div class="projetos-cards-MAAP" >
                     <div class="card-MAAP-img">
                         <img src="/assets/Imagens/Oficinas/projetos-apresentando.jpg">
                     </div>
                     <div class="card-MAAP-text">
                         <h2>Apresentando o MARIA</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <img src="/assets/Imagens/Icones/icones-projetos-apresentando.png">
+                        <img class="girar-icon" src="/assets/Imagens/Icones/icones-projetos-apresentando.png">
                     </div>
                 </div>
             </div>
         </section>
+        <div id="contato"></div>
         <section class="contatos">
             <div class="bg"></div>
             <h1 class="shake">CONTATO</h1>
@@ -139,12 +143,13 @@
                             <div class="icone-confirm"><img src="/assets/Imagens/Icones/Icone-confirm.png" alt=""></div>
                             <h3>Mensagem enviada</h3>
                             <button type="submit" id="btn-voltar" value="Submit">Voltar</button>
-                            <div class="caixa-logo"><img src="/assets/Imagens/logo-fundoamarelo-removebg-preview 1.png" alt=""></div>
+                            <div class="caixa-logo"><img src="/assets/Imagens/logo-fundoamarelo-removebg-preview 1.png" alt="Logo da caixa"></div>
                         </div>
                     </form>
                 </div>
             </div>
-        </section>  
+        </section> 
+        <div id="footer"></div>
         <footer class="rodape">
             <div class="redes">
                 <ul>
@@ -161,10 +166,10 @@
             </div>
             <nav class="navbar">
                 <ul>
-                    <li id="primeiro"><a href="#">HOME</a></li>
-                    <li><a href="#">SOBRE NÓS</a></li>
-                    <li><a href="#">PROJETOS</a></li>
-                    <li><a href="#">CONTATO</a></li>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#sobre">SOBRE NÓS</a></li>
+                    <li><a href="#projetos">PROJETOS</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
                 </ul>
             </nav>
             <p>Todos os direitos reservados 2022</p>

@@ -93,14 +93,21 @@ function passarSlideSobre(n){
 }
 
 function confirmarEnvio(){
+    let inputName = document.getElementById('nome')
+    let inputEmail = document.getElementById('email')
+    let inputMensagem = document.getElementById('mensagem')
     let caixa = document.getElementsByClassName('caixa-confirm')
     let corFundo = document.getElementsByClassName('bg')
     let opacityMap = document.getElementsByClassName('mapouter')
 
-    corFundo[0].style.display = 'block'
-    caixa[0].style.display = 'block'
-    caixa[0].style.opacity = '1'
-    opacityMap[0].style.opacity = '0.5'
-}
+    if(inputName.value != '' && inputEmail.value != '' && inputMensagem.value != ''){
+        caixa[0].style.display = 'block'
+        caixa[0].style.opacity = '1'
+        opacityMap[0].style.opacity = '0.5'
+        corFundo[0].style.display = 'block'
+    } else{
+        alert("Preencha todos os campos!")
+    }
 
+}
 
