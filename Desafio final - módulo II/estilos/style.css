@@ -633,6 +633,10 @@ body{
     width: 50%;
 }
 
+#titulo-mapa{
+    display: none;
+}
+
 .mapouter{
     position: relative;
     text-align: right;
@@ -657,7 +661,7 @@ body{
     width: 50%;
 }
 
-.contatos-right h2{
+.contatos-right h2, #titulo-mapa{
     text-align: center;
     margin-top: 33px;
     margin-bottom: 20px;
@@ -975,6 +979,15 @@ ul li a .fa-brands{
     .sobre-content-left-02 img{
         height: 100%;
     }
+
+    .projetos-cards-MAAP{
+        width: 425px;
+        font-size: 15px;
+    }
+
+    .contatos-container{
+        width: 1100px;
+    }
 }
 
 @media screen and (max-width: 1275px) {
@@ -1016,6 +1029,24 @@ ul li a .fa-brands{
 
     .sobre-card{
         width: 100%;
+        height: 570px;
+    }
+
+    .projetos{
+        height: 1800px;
+    }
+
+    .projetos-cards{
+        flex-wrap: wrap;
+    }
+
+    .projetos-cards-MAAP{
+        width: 410px;
+        font-size: 15px;
+    }
+
+    .contatos-container{
+        width: 1000px;
         height: 570px;
     }
 
@@ -1113,6 +1144,38 @@ ul li a .fa-brands{
     .proximo-sobre{
         left: 95%;
     }
+
+    .projetos{
+        height: 2580px;
+    }
+
+    .projetos-cards{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .projetos-cards-MAAP{
+        width: 490px;
+    }
+
+    .contatos-container{
+        width: 970px;
+        height: 570px;
+    }
+
+    .rodape{
+        height: 280px;
+    }
+
+    .redes{
+        height: 80px;
+    }
+
+    .navbar ul li{
+        padding: 0 20px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -1155,6 +1218,21 @@ ul li a .fa-brands{
 
     .sobre-content-right p, .sobre-content-right-02{
         font-size: 17px;
+    }
+
+    .contatos-container{
+        width: 750px;
+        height: 560px;
+    }
+
+    #form input{
+        height: 40px;
+    }
+
+    #form #btn{
+        margin: 0 0 0 60px;
+        width: 180px;
+        font-size: 18px;
     }
 }
 
@@ -1219,6 +1297,61 @@ ul li a .fa-brands{
 
     .sobre-content-right p, .sobre-content-right-02 p{
         font-size: 14px;
+    }
+
+    .contatos{
+        height: 1280px;
+    }
+
+    .contatos h2, #titulo-mapa{
+        font-size: 32px;
+    }
+
+    .contatos-container{
+        flex-direction: column;
+        height: 1050px;
+        width: 80%;
+    }
+
+    .contatos-left{
+        width: 95%;
+        height: 55%;
+        margin: 0 15px 0 15px;
+    }
+
+    #titulo-mapa{
+        display: block;
+        margin: 15px 0 15px 0;
+    }
+
+    .contatos-left .mapouter{
+        height: 80%;
+        margin: auto;
+    }
+
+    .contatos-right{
+        height: 52%;
+        width: 100%;
+        margin: auto;
+    }
+
+    .contatos-right h2{
+        margin: 5px 0;
+    }
+
+    #form{
+        margin-top: 20px;
+    }
+
+    #form #btn{
+        margin: 0 0 0 35%;
+        width: 30%;
+        font-size: 17px;
+    }
+
+    .navbar ul li{
+        padding: 0 10px;
+        font-size: 20px;
     }
 }
 
@@ -1312,5 +1445,95 @@ ul li a .fa-brands{
         left: 90%;
         top: 40%;
         font-size: 14px;
+    }
+
+    .projetos h1{
+        font-size: 36px;
+    }
+
+    .projetos-cards{
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .projetos-cards-MAAP{
+        width: 100%;
+        font-size: 13px;
+        height: 750px;
+    }
+
+    .card-MAAP-img{
+        width: 100%;
+        height: 45%;
+    }
+
+    .card-MAAP-img img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .contatos h1{
+        font-size: 36px;
+    }
+
+    .contatos-container{
+        width: 100%;
+    }
+
+    .contatos-left{
+        margin: 0;
+        width: 100%;
+    }
+
+    #titulo-mapa{
+        display: block;
+        margin: 15px 0 15px 0;
+    }
+
+    .contatos-left .mapouter{
+        width: 100%;
+    }
+
+    .contatos-right{
+        height: 48%;
+        width: 100%;
+        margin: auto;
+    }
+
+    #form #btn{
+        margin: 0 0 0 30%;
+        width: 45%;
+        font-size: 17px;
+    }
+
+    .caixa-confirm{
+        left: 10%;
+        width: 330px;
+    }
+
+    .caixa-confirm h3{
+        font-size: 23px;
+    }
+
+    .rodape{
+        height: 430px;
+    }
+
+    .redes{
+        height: 80px;
+    }
+    
+    .redes ul{
+        width: 100%;
+        padding: 30px 0;
+    }
+
+    .navbar ul{
+        padding: 0;
+    }
+
+    .navbar ul li{
+        display: block;
+        padding: 10px 0;
     }
 }
