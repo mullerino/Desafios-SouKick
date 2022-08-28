@@ -113,6 +113,42 @@ function confirmarEnvio(){
     } else{
         alert("Preencha todos os campos!")
     }
-
 }
 
+function showMenu(){
+    let menu = document.getElementById('navbar')
+    let header = document.getElementById('header')
+
+    if(menu.className === 'header-navbar'){
+        menu.className += ' responsive'
+        header.style.height = '330px'
+        header.style.background = '#feda12'
+    }
+    else{
+        menu.className = 'header-navbar'
+        header.style.height = '128px'
+    }
+}
+
+const target = document.querySelectorAll('[data-surgir]')
+const animationClass = 'surgindo'
+
+window.addEventListener('scroll', function(){
+    animationScroll();
+})
+
+function animationScroll(){
+    const windowTop = window.pageYOffset;
+
+    target.forEach(function(element){
+        console.log(windowTop)
+        if(windowTop > element.offsetTop + (window.innerHeight * 0.75)){
+            element.classList.add(animationClass)
+        }
+        else{
+            element.classList.remove(animationClass)
+        }
+    })
+}
+
+animationScroll()
