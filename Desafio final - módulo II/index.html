@@ -19,16 +19,15 @@
                 <div class="header-logo">
                     <img src="/assets/Imagens/logo-fundoamarelo.png">
                 </div>
-                <nav class="header-navbar">
+                <nav class="header-navbar" id="navbar">
                     <ul>
                         <li id="homes"><a href="#home">HOME</a></li>
                         <li id="sobres"><a href="#sobre">SOBRE NÓS</a></li>
                         <li id="projetoss"><a href="#projetos">PROJETOS</a></li>
                         <li id="contatoss"><a href="#contato">CONTATO</a></li>
                     </ul>
-                
                 </nav>
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined" id="btn-menu" onclick="showMenu()">
                     menu
                 </span>
             </div>
@@ -61,7 +60,7 @@
         <div id="sobre"></div>
         <section class="sobre">
             <h1>SOBRE NÓS</h1>
-            <div class="sobre-content-carrosel">
+            <div class="sobre-content-carrosel" data-surgir="left">
                 <div class="sobre-card pass">
                     <div class="sobre-content-left">
                         <img src="/assets/Imagens/zyro-image.png" alt="Sobre nós">
@@ -87,7 +86,7 @@
         <div id="projetos"></div>
         <section class="projetos">
             <h1>PROJETOS</h1>
-            <div class="projetos-cards">
+            <div class="projetos-cards" data-surgir="left">
                 <div class="projetos-cards-MAAP">
                     <div class="card-MAAP-img">
                         <img src="/assets/Imagens/Projetos/IMG-20191109-WA0026.jpg">
