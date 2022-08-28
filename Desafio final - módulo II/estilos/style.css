@@ -471,7 +471,7 @@ body{
 
 .projetos{
     background-color: #feda00;
-    height: 1100px;
+    height: 1050px;
     position: relative;
 }
 
@@ -937,19 +937,21 @@ ul li a .fa-brands{
     z-index: -1;
 }
 
-[data-surgir]{
-    opacity: 0;
-    transition: 0.4s;
+.from-bottom{
+    animation: fade-in 0.8s cubic-bezier(.17,.67,.49,1.02);
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
 }
 
-[data-surgir = "left"]{
-    transform: translate3d(-100px, 0px, 0px);
-}
-
-[data-surgir].surgindo{
-    opacity: 1;
-    transform: translate3d(0px ,0px,0px);
-    transition: 2s;
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media screen and (max-width: 1550px) {
@@ -1195,6 +1197,10 @@ ul li a .fa-brands{
     .navbar ul li{
         padding: 0 20px;
     }
+
+    .from-bottom{
+        animation: none;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -1252,6 +1258,10 @@ ul li a .fa-brands{
         margin: 0 0 0 60px;
         width: 180px;
         font-size: 18px;
+    }
+
+    .from-bottom{
+        animation: none;
     }
 }
 
@@ -1401,6 +1411,10 @@ ul li a .fa-brands{
     .header-navbar.responsive ul li a{
         display: block;
         text-align: center;
+    }
+
+    .from-bottom{
+        animation: none;
     }
 }
 
@@ -1631,5 +1645,9 @@ ul li a .fa-brands{
         transition: deslocando 0.7s ease-in;
         animation-name: deslocando;
         animation-duration: 1.5s;
+    }
+
+    .from-bottom{
+        animation: none;
     }
 }
