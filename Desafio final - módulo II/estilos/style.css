@@ -33,12 +33,16 @@ body{
     padding: 0;
 }
 
+#header{
+    height: 130px;
+}
+
 .header-container{
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: #feda00;
-    height: 135px;
+    height: 130px;
 }
 
 .header-logo{
@@ -280,7 +284,6 @@ body{
 .sobre{
     height: 975px;
     background-color: #191200;
-    position: relative;
 }
 
 .sobre h1{
@@ -291,6 +294,7 @@ body{
     padding-bottom: 85px;
     font-family: 'Built Titling BD';
     font-size: 40px;
+    position: relative;
 }
 
 .sobre h1:hover{
@@ -310,11 +314,11 @@ body{
 }
 
 .sobre h1:hover::before{
-    left: 33%;
+    left: 30%;
 }
 
 .sobre h1:hover::after{
-    left: 56%;
+    left: 60%;
 }
 
 @keyframes surgir-h1{
@@ -933,6 +937,21 @@ ul li a .fa-brands{
     z-index: -1;
 }
 
+[data-surgir]{
+    opacity: 0;
+    transition: 0.4s;
+}
+
+[data-surgir = "left"]{
+    transform: translate3d(-100px, 0px, 0px);
+}
+
+[data-surgir].surgindo{
+    opacity: 1;
+    transform: translate3d(0px ,0px,0px);
+    transition: 2s;
+}
+
 @media screen and (max-width: 1550px) {
     .home-content-left{
         width: 45%;
@@ -1349,13 +1368,54 @@ ul li a .fa-brands{
         font-size: 17px;
     }
 
+    #header{
+        height: 110px;
+    }
+
+    .header-container{
+        position: relative;
+        display: block;
+    }
+
+    #btn-menu{
+        position: absolute;
+        right: 0;
+        top: 35px;
+    }
+
     .navbar ul li{
         padding: 0 10px;
         font-size: 20px;
     }
+
+    .header-navbar.responsive{
+        position: relative;
+    }
+
+    .header-navbar.responsive ul{
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header-navbar.responsive ul li a{
+        display: block;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 600px) {
+    .header-container{
+        display: block;
+        position: relative;
+    }
+
+    #btn-menu{
+        position: absolute;
+        right: 0;
+        top: 35px;
+    }
+    
     .home-content-left{
         width: 80%;
         text-align: center;
@@ -1535,5 +1595,41 @@ ul li a .fa-brands{
     .navbar ul li{
         display: block;
         padding: 10px 0;
+    }
+
+    .header-navbar.responsive{
+        position: relative;
+    }
+
+    .header-navbar.responsive ul{
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header-navbar.responsive ul li a{
+        display: block;
+        text-align: center;
+    }
+
+    .sobre h1:hover::after, .sobre h1:hover::before{
+        animation: none;
+    }
+
+    .projetos h1:hover::before, .projetos h1:hover::after{
+        animation: none;
+    }
+
+    .header-navbar li a:hover::after{
+        content: '';
+        height: 3px;
+        width: 50%;
+        position: absolute;
+        top: 100%;
+        left: 25%;
+        background-color: #2c0e70;
+        transition: deslocando 0.7s ease-in;
+        animation-name: deslocando;
+        animation-duration: 1.5s;
     }
 }
