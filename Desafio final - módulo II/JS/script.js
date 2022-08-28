@@ -130,25 +130,21 @@ function showMenu(){
     }
 }
 
-const target = document.querySelectorAll('[data-surgir]')
-const animationClass = 'surgindo'
+const players = Array.from(document.querySelectorAll('.play-on-screen')) // transforma a node lista em array
 
-window.addEventListener('scroll', function(){
-    animationScroll();
-})
-
-function animationScroll(){
-    const windowTop = window.pageYOffset;
-
-    target.forEach(function(element){
-        console.log(windowTop)
-        if(windowTop > element.offsetTop + (window.innerHeight * 0.75)){
-            element.classList.add(animationClass)
-        }
-        else{
-            element.classList.remove(animationClass)
-        }
-    })
+function isOnScreen(el) {
+    let rect = el.getBoundingClientRect() 
+    return rect.top > 0 && rect.bottom - 700 < window.innerHeight;
 }
 
-animationScroll()
+function playAnimation(el){
+    if(isOnScreen(el)){
+        el.style.animationPlayState = 'running'
+    }
+}
+
+const render = () => players.forEach(playAnimation);
+
+render();
+
+window.addEventListener('scroll',render);
