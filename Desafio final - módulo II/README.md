@@ -14,10 +14,14 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Criar a sessão Sobre nós
 - [x] Criar cards da sessão Projetos
 - [x] Criar a sessão Contato
-- [ ] Criar a sessão Footer
-- [ ] Fazer carrosel do sobre nós
-- [ ] Inserir animações e efeitos nas sessões
-- [ ] Criar a caixa de confirmação de envio do formulário
+- [x] Criar a sessão Footer
+- [x] Fazer carrosel do sobre nós
+- [x] Inserir animações e efeitos nas sessões
+- [x] Criar a caixa de confirmação de envio do formulário
+- [x] Enviar mensagem escrita no formulário para email cadastrado
+- [x] Deixar todo o projeto responsivo
+- [ ] Ajustar animações para o site responsivo
+- [ ] Criar loading page
 
 ## 🛠️ Construído com
 
