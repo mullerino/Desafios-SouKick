@@ -132,8 +132,8 @@ function showMenu(){
 
 const players = Array.from(document.querySelectorAll('.play-on-screen')) // transforma a node lista em array
 
-function isOnScreen(el) {
-    let rect = el.getBoundingClientRect() 
+function isOnScreen(el) { // qual elemento está na tela
+    let rect = el.getBoundingClientRect() // pega o bottom ou top do elemento em relação ao viewport
     return rect.top > 0 && rect.bottom - 700 < window.innerHeight;
 }
 
