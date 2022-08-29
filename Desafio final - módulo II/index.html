@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/estilos/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,1,0"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <title>MARIA</title>
-    <link rel="shortcut icon" href="/assets/Imagens/logo-fundoamarelo-removebg-preview 1.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/Imagens/logo.png" type="image/x-icon" sizes="198x198">
 </head>
-<body>
+<body onload="loading()">
+    <div class="box-load" id="load">
+        <div class="pre"></div>
+    </div>
     <div class="container">
         <div id="home"></div>
         <header id="header">
@@ -140,7 +143,7 @@
                         <input type="text" name="name" id="nome" placeholder="Seu nome" required>
                         <input type="email" name="email" id="email" placeholder="Seu email" required>
                         <textarea name="message" id="mensagem" cols="30" rows="10" placeholder="Deixe sua mensagem" required></textarea>
-                        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/obrigado.html">
+                        <input type="hidden" name="redirectTo" value="https://mariaifzn.netlify.app/obrigado.html">
                         <button type="button" id="btn" value="Submit" onclick="confirmarEnvio()">Enviar</button>
                         <div class="caixa-confirm">
                             <div class="icone-confirm"><img src="/assets/Imagens/Icones/Icone-confirm.png" alt=""></div>
