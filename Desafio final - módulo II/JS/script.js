@@ -148,3 +148,11 @@ const render = () => players.forEach(playAnimation);
 render();
 
 window.addEventListener('scroll',render);
+
+function loading(){
+    let load = document.getElementById('load');
+    let content = document.getElementsByClassName('container')
+
+    load.style.display = 'none'
+    content[0].style.display = 'block'
+}
