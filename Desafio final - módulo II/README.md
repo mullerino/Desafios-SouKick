@@ -20,8 +20,9 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Criar a caixa de confirmação de envio do formulário
 - [x] Enviar mensagem escrita no formulário para email cadastrado
 - [x] Deixar todo o projeto responsivo
-- [ ] Ajustar animações para o site responsivo
-- [ ] Criar loading page
+- [x] Ajustar animações para o site responsivo
+- [x] Criar loading page
+- [ ] Alterar tamanho dos cards-projeto para tela de dispositivo móvel
 
 ## 🛠️ Construído com
 
