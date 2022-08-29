@@ -24,8 +24,41 @@ html {
     scroll-behavior: smooth;
 }
 
+body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
 *{
     box-sizing: border-box;
+}
+
+.pre{
+    width: 80px;
+    height: 80px;
+    background-image: url(/assets/Imagens/circle.png);
+    background-position: center;
+    background-size: contain;
+    animation: load 2s infinite linear;
+}
+
+.box-load{
+    height: 960px;
+    background-color: #feda00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: none;
+}
+
+@keyframes load{
+    to{
+        transform: rotate(360deg);
+    }
 }
 
 body{
@@ -154,14 +187,14 @@ body{
 
 @keyframes surgir{
     0%{
-        margin-left: -90px;
+        transform: translate3d(-90px, 0, 0);
         opacity: 0.5;
     }
     50%{
         opacity: 0.75;
     }
     100%{
-        margin-left: 0px;
+        transform: translate3d(0,0,0);
         opacity: 1;
     }
 }
@@ -269,15 +302,13 @@ body{
 }
 
 @keyframes fade{
-    from {opacity: .8;}
-    to {opacity: 1;}
-
     from {
-        margin-left: 3%;
-      }
-    
-      to {
-        margin-left: 0%;
+        transform: translate3d(30px, 0, 0);
+        opacity: .8;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
     }
 }
 
@@ -304,7 +335,7 @@ body{
 
 .sobre h1:hover::after, .sobre h1:hover::before{
     content: '';
-    width: 200px;
+    width: 170px;
     height: 4px;
     position: absolute;
     top: 81px;
@@ -314,11 +345,11 @@ body{
 }
 
 .sobre h1:hover::before{
-    left: 30%;
+    transform: translateX(-260px);
 }
 
 .sobre h1:hover::after{
-    left: 60%;
+    transform: translateX(70px);
 }
 
 @keyframes surgir-h1{
@@ -502,11 +533,11 @@ body{
 }
 
 .projetos h1:hover::before{
-    left: 34%;
+    transform: translateX(-260px);
 }
 
 .projetos h1:hover::after{
-    left: 55.5%;
+    transform: translateX(60px);
 }
 
 @keyframes surgir-h1-p{
@@ -617,7 +648,7 @@ body{
 .bg{
     background-color: rgba(0,0,0,.4); 
     width: 100%; 
-    height: 100%; 
+    height: 1190px; 
     position: absolute; 
     display: none;
 }
@@ -1071,6 +1102,11 @@ ul li a .fa-brands{
         height: 570px;
     }
 
+    .caixa-confirm{
+        left: 32%;
+    }
+
+
 }
 
 @media screen and (max-width: 1050px) {
@@ -1260,6 +1296,11 @@ ul li a .fa-brands{
         font-size: 18px;
     }
 
+    .caixa-confirm{
+        left: 28%;
+        width: 330px;
+    }
+
     .from-bottom{
         animation: none;
     }
@@ -1415,6 +1456,20 @@ ul li a .fa-brands{
 
     .from-bottom{
         animation: none;
+    }
+
+    .caixa-confirm{
+        left: 24%;
+    }
+
+    .sobre h1:hover::after, .sobre h1:hover::before{
+        display: none;
+        animation: none;
+    }
+
+    .projetos h1:hover::before, .projetos h1:hover::after{
+        animation: none;
+        display: none;
     }
 }
 
@@ -1581,8 +1636,9 @@ ul li a .fa-brands{
     }
 
     .caixa-confirm{
-        left: 10%;
-        width: 330px;
+        left: 11.5%;
+        top: 70%;
+        width: 300px;
     }
 
     .caixa-confirm h3{
@@ -1627,11 +1683,13 @@ ul li a .fa-brands{
     }
 
     .sobre h1:hover::after, .sobre h1:hover::before{
+        display: none;
         animation: none;
     }
 
     .projetos h1:hover::before, .projetos h1:hover::after{
         animation: none;
+        display: none;
     }
 
     .header-navbar li a:hover::after{
