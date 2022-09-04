@@ -101,11 +101,9 @@ function confirmarEnvio(){
     let corFundo = document.getElementsByClassName('bg')
     let opacityMap = document.getElementsByClassName('mapouter')
 
+
     if(inputName.value != '' && inputEmail.value != '' && inputMensagem.value != ''){
-        inputName.disabled = true;
-        inputEmail.disabled = true;
-        inputMensagem.disabled = true;
-        buttonEnviar.disabled = true;
+        buttonEnviar.disabled = 'true'
         caixa[0].style.display = 'block';
         caixa[0].style.opacity = '1';
         opacityMap[0].style.opacity = '0.5';
@@ -129,6 +127,7 @@ function showMenu(){
         header.style.height = '128px'
     }
 }
+
 
 const players = Array.from(document.querySelectorAll('.play-on-screen')) // transforma a node lista em array
 
