@@ -2,7 +2,8 @@
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
-<img src="interface.png" alt="Interface do projeto">
+![Site-Completo](https://user-images.githubusercontent.com/75099666/188758638-5012eb78-d501-4fd6-ba60-e2751b620dfa.jpeg)
+
 
 > O projeto tem como objetivo desenvolver um site para o laboratório de robótica MARIA utilizando HTML, CSS e JS, sendo uma continuação do projeto disponibilizado na parada 28.
 
@@ -23,6 +24,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Ajustar animações para o site responsivo
 - [x] Criar loading page
 - [ ] Alterar tamanho dos cards-projeto para tela de dispositivo móvel
+- [ ] Ajustar tela de loading para dispositivos móveis
 
 ## 🛠️ Construído com
 
