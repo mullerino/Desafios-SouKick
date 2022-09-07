@@ -1479,7 +1479,7 @@ ul li a .fa-brands{
 
 @media screen and (max-width: 600px) {
     .box-load{
-        height: 800px;
+        height: 100vh;
     }
     .header-container{
         display: block;
