@@ -1480,7 +1480,6 @@ ul li a .fa-brands{
 @media screen and (max-width: 600px) {
     .box-load{
         height: 100vh;
-        background-color: #0e0d0d;
     }
     .header-container{
         display: block;
