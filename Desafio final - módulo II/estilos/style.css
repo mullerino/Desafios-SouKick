@@ -299,6 +299,7 @@ body{
 .fade{
     animation-name: fade;
     animation-duration: 1.6s;
+    transition: fade .4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @keyframes fade{
@@ -1043,7 +1044,7 @@ ul li a .fa-brands{
 
 @media screen and (max-width: 1275px) {
     .box-load{
-        height: 850px;
+        height: 100vh;
     }
     .header-navbar ul{
         font-size: 20px;
@@ -1057,7 +1058,7 @@ ul li a .fa-brands{
 
     .home-content-left{
         width: 40%;
-        margin: 0 10px;
+        margin: 0 30px 0 35px;
     }
 
     .home-content-left h1{
@@ -1072,8 +1073,19 @@ ul li a .fa-brands{
     }
 
     .home-content-right-carrosel{
-        height: 480px;
-        margin-right: 20px;
+        height: 440px;
+        margin: 0 20px 20px 15px;
+    }
+
+    @keyframes fade{
+        from {
+            transform: translate3d(6px, 0, 0);
+            opacity: .7;
+        }
+        to {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
     }
 
     .sobre-content-carrosel{
@@ -1514,8 +1526,8 @@ ul li a .fa-brands{
 
     .home-content-right-carrosel{
         margin: 40px 10px;
-        width: 100%;
-        height: 390px;
+        width: 90%;
+        height: 340px;
         border-radius: none;
         text-align: center;
     }
@@ -1539,15 +1551,16 @@ ul li a .fa-brands{
 
     .sobre-card{
         flex-direction: column;
+        align-items: center;
         height: 970px;
     }
 
     .sobre-content-carrosel{
-        width: 100%;
+        width: 95%;
     }
 
     .sobre-content-left, .sobre-content-left-02{
-        width: 100%;
+        width: 85%;
         height: 35%;
         margin: 10px 0 0 0;
     }
@@ -1558,7 +1571,7 @@ ul li a .fa-brands{
     }
 
     .sobre-content-right, .sobre-content-right-02{
-        width: 100%;
+        width: 85%;
         height: 50%;
         margin: 0;
     }
