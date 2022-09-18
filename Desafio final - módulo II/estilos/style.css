@@ -39,7 +39,7 @@ body::before {
     height: 10px;
     box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
     z-index: 3;
-  }
+}
 
 *{
     box-sizing: border-box;
@@ -235,6 +235,54 @@ body{
     font-family: 'Poppins SemiBold';
     text-transform: uppercase;
     color: white;
+}
+
+.home-content-left h2::after{
+    content: '|';
+    margin-left: 4px;
+    opacity: 1;
+    animation: piscar .7s infinite;
+}
+
+@keyframes piscar{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+.line{
+    margin: 0 auto;
+    white-space: nowrap;
+    text-align: left;
+    overflow: hidden;
+}
+
+.home-content-left h1::after{
+    content: '|';
+    margin-left: 3px;
+    color: #fcde33;
+    animation: piscar 1s steps(40) infinite;
+}
+
+@keyframes blinkCursor{
+    from{
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
+
+@keyframes digitando{
+    from{
+        width: 0;
+    } 
+    to{
+        width: 14em;
+    }
 }
 
 .home-content-left button{
