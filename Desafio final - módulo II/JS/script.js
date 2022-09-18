@@ -3,10 +3,13 @@ let slidePosAut = 1;
 let slideAut
 let slidePosSobre = 1
 const forms = document.getElementById('form')
+const subtitle = document.querySelector('h2')
+const title = document.querySelector('.line')
 
 mostrarSlide(slidePos)
 slideAut = setInterval(passarSlideAut,4500)
 mostrarSlideSobre(slidePosSobre)
+
 
 function mostrarSlide(n){
     let pontos = document.getElementsByClassName("ponto")
@@ -128,7 +131,6 @@ function showMenu(){
     }
 }
 
-
 const players = Array.from(document.querySelectorAll('.play-on-screen')) // transforma a node lista em array
 
 function isOnScreen(el) { // qual elemento está na tela
@@ -144,9 +146,8 @@ function playAnimation(el){
 
 const render = () => players.forEach(playAnimation);
 
-render();
-
 window.addEventListener('scroll',render);
+render();
 
 function loading(){
     let load = document.getElementById('load');
@@ -155,3 +156,15 @@ function loading(){
     load.style.display = 'none'
     content[0].style.display = 'block'
 }
+
+function typeWrite(elemento, time){
+    const textoArray = elemento.innerHTML.split('');
+
+    elemento.innerHTML = '';
+    textoArray.forEach((letra,i) => {
+        setTimeout(() => elemento.innerHTML += letra, time * i)
+    })
+}
+
+typeWrite(title, 150)
+typeWrite(subtitle, 200)
