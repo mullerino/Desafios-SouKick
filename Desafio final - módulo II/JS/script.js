@@ -157,14 +157,90 @@ function loading(){
     content[0].style.display = 'block'
 }
 
-function typeWrite(elemento, time){
-    const textoArray = elemento.innerHTML.split('');
+const display = title
+let frase = ['Olá, bem vindo ao MARIA']
+let fim = false
+let deletar = false
+let i = 0
+let j = 0
+let fraseAtual = []
 
-    elemento.innerHTML = '';
-    textoArray.forEach((letra,i) => {
-        setTimeout(() => elemento.innerHTML += letra, time * i)
-    })
+function typeWrite(){
+    fim = false
+    display.innerHTML = fraseAtual.join('')
+
+    if(i<frase.length){
+        if(!deletar && j<=frase[i].length){
+            fraseAtual.push(frase[i][j])
+            j++
+            display.innerHTML = fraseAtual.join('')
+        }
+        if(deletar){
+            console.log('delete')
+            fraseAtual.pop(frase[i])
+            j--
+            display.innerHTML = fraseAtual.join('')
+        }
+        if(j == frase[i].length){
+            fim = true
+            deletar = true
+        } 
+
+        if(deletar && j == 0){
+            console.log
+            deletar = false
+            fraseAtual = []
+            i++
+            if(i == frase.length){
+                i = 0;
+            }
+        }
+    }
+    
+    const spedUp =  Math.random() * (80 -50) + 50
+    const normalSpeed = Math.random() * (300 -200) + 200
+    const tempo = fim ? 4000 : deletar ? spedUp : normalSpeed
+    setTimeout(() => typeWrite(), tempo)
 }
+    typeWrite()
 
-typeWrite(title, 150)
-typeWrite(subtitle, 200)
+    //elemento.innerHTML = '';
+
+    /*textoArray.forEach((letra,i) => {
+       setTimeout(() => elemento.innerHTML += letra, time * i)
+    })
+
+    setTimeout(() =>(console.log('espera'), deleteText()), textoArray.length * time * 1.2)*/
+
+    /*function deleteText(){
+        let a = 1
+        elemento.innerHTML = '';
+        let letras = []
+
+            for(let i = 0; i<textoArray.length; i++){
+                letras[i] = textoArray[i]
+            }
+
+            for(let j=0; j<textoArray.length; j++){
+                setInterval(() => elemento.innerHTML += letras[j], 100)
+            }
+        }*/
+
+/*function repetir(){
+    let cont = 0
+    const textoArray = title.innerHTML.split('');
+    title.innerHTML = '';
+
+    if(cont >= textoArray.length){
+        title.innerHTML = ''
+        cont = 0
+        console.log('entrou')
+    }
+
+    title.innerHTML += textoArray[cont]
+    cont++
+    console.log(cont)
+} */
+//typeWrite(title, 200,2)
+//interval = setInterval(repetir(),1000)
+//typeWrite(subtitle, 75,3)
