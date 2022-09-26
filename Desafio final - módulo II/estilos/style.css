@@ -1629,13 +1629,13 @@ ul li a .fa-brands{
     }
 
     .sobre{
-        height: 1120px;
+        height: 1170px;
     }
 
     .sobre-card{
         flex-direction: column;
         align-items: center;
-        height: 970px;
+        height: 930px;
     }
 
     .sobre-content-carrosel{
@@ -1644,27 +1644,40 @@ ul li a .fa-brands{
 
     .sobre-content-left, .sobre-content-left-02{
         width: 85%;
-        height: 35%;
+        height: 28%;
         margin: 10px 0 0 0;
+        border-radius: 20px;
     }
 
     .sobre-content-left img, .sobre-content-left-02 img{
         width: 100%;
-        height: 100%;
+        height: 90%;
+    }
+
+    .sobre-content-left-02{
+        background-color: #feda00;
     }
 
     .sobre-content-right, .sobre-content-right-02{
         width: 85%;
-        height: 50%;
+        height: 55%;
         margin: 0;
     }
 
     .sobre-content-right p, .sobre-content-right-02 p{
-        font-size: 13px;
+        font-size: 12px;
+    }
+
+    .sobre-content-right{
+        background-color: #f7d40bd5;
+    }
+
+    .sobre-content-right-02 p{
+        color: #ffffffe3;
     }
 
     .sobre-content-right h2, .sobre-content-right-02 h2{
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .voltar-sobre{
@@ -1680,7 +1693,7 @@ ul li a .fa-brands{
     }
 
     .projetos{
-        height: 2700px;
+        height: 2500px;
     }
 
     .projetos h1{
@@ -1695,12 +1708,12 @@ ul li a .fa-brands{
     .projetos-cards-MAAP{
         width: 85%;
         font-size: 13px;
-        height: 790px;
+        height: 730px;
     }
 
     .card-MAAP-img{
         width: 100%;
-        height: 40%;
+        height: 33%;
     }
 
     .card-MAAP-img img{
@@ -1708,38 +1721,49 @@ ul li a .fa-brands{
         height: 100%;
     }
 
+    .projetos-cards-MAAP:hover {
+        transform: scale(1.01);
+    }
+
     .contatos h1{
         font-size: 36px;
     }
 
     .contatos-container{
-        width: 100%;
+        width: 92%;
     }
 
     .contatos-left{
         margin: 0;
         width: 100%;
+        height: 400px;
     }
 
     #titulo-mapa{
         display: block;
-        margin: 15px 0 15px 0;
+        margin: 30px 0 20px 0;
+        font-size: 26px;
     }
 
-    .contatos-left .mapouter{
-        width: 100%;
+    .mapouter{
+        width: 90%;
+    }
+
+    .gmap_canvas{
+        height: 75%;
     }
 
     .contatos-right{
         height: 48%;
-        width: 100%;
+        width: 80%;
         margin: auto;
+        margin-top: 20px;
     }
 
     #form #btn{
-        margin: 0 0 0 30%;
-        width: 45%;
-        font-size: 17px;
+        margin: 0 0 0 25%;
+        width: 50%;
+        font-size: 16px;
     }
 
     .caixa-confirm{
@@ -1772,6 +1796,10 @@ ul li a .fa-brands{
     .navbar ul li{
         display: block;
         padding: 10px 0;
+    }
+
+    .navbar ul li a{
+        font-size: 18px;
     }
 
     .header-navbar.responsive{
