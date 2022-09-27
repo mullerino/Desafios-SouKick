@@ -401,6 +401,11 @@ body{
 .sobre{
     height: 975px;
     background-color: #191200;
+    background-image: url(/assets/Imagens/fundo-sobre.png);
+    background-position:left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
 }
 
 .sobre h1{
@@ -421,35 +426,49 @@ body{
 
 .sobre h1:hover::after, .sobre h1:hover::before{
     content: '';
-    width: 170px;
+    width: 150px;
     height: 4px;
     position: absolute;
-    top: 81px;
-    transition: surgir-h1 .3s ease;
-    animation: surgir-h1 1.2s 1;
     background-color: #f0d32e;
 }
 
 .sobre h1:hover::before{
-    transform: translateX(-260px);
+    top: 50px;
+    transition: surgir-cima .3s ease;
+    animation: surgir-cima 0.7s 1 linear;
 }
 
 .sobre h1:hover::after{
-    transform: translateX(70px);
+    top: 110px;
+    left: 45%;
+    transition: surgir-baixo .3s ease;
+    animation: surgir-baixo 0.7s 1 linear;
 }
 
-@keyframes surgir-h1{
+@keyframes surgir-cima{
     0%{
-        margin-left: 30px;
-        margin-top: -12px;
+        transform: translateX(-80px);
         background-color: #191200;
     }
     50%{
         background-color: #8f8931;
     }
     100%{
-        margin-left: 0;
-        margin-top: 0;
+        transform: translateX(0px);
+        background-color: #f0d32e;
+    }
+}
+
+@keyframes surgir-baixo{
+    0%{
+        transform: translateX(80px);
+        background-color: #191200;
+    }
+    50%{
+        background-color: #8f8931;
+    }
+    100%{
+        transform: translateX(0px);
         background-color: #f0d32e;
     }
 }
@@ -590,6 +609,11 @@ body{
     background-color: #feda00;
     height: 1050px;
     position: relative;
+    background-image: url(/assets/Imagens/fundo-amarelo.jpg);
+    background-position:left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
 }
 
 .projetos h1{
@@ -610,34 +634,50 @@ body{
 .projetos h1:hover::before, .projetos h1:hover::after{
     background-color: #030300;
     content: '';
-    width: 200px;
+    width: 140px;
     height: 4px;
     position: absolute;
-    top: 81px;
     transition: surgir-h1-p .3s ease;
     animation: surgir-h1-p 1.2s 1;
 }
 
 .projetos h1:hover::before{
-    transform: translateX(-260px);
+    top: 50px;
+    transition: surgir-cima-p .3s ease;
+    animation: surgir-cima-p 0.7s 1 linear;
 }
 
 .projetos h1:hover::after{
-    transform: translateX(60px);
+    top: 110px;
+    left: 45.4%;
+    transition: surgir-baixo-p .3s ease;
+    animation: surgir-baixo-p 0.7s 1 linear;
 }
 
-@keyframes surgir-h1-p{
+@keyframes surgir-baixo-p{
     0%{
-        margin-left: 30px;
-        margin-top: -12px;
         background-color: #f0d32e;
+        transform: translateX(80px);
     }
     50%{
         background-color: #8f8931;
     }
     100%{
-        margin-left: 0;
-        margin-top: 0;
+        transform: translateX(0);
+        background-color: #191200;
+    }
+}
+
+@keyframes surgir-cima-p{
+    0%{
+        background-color: #f0d32e;
+        transform: translateX(-80px);
+    }
+    50%{
+        background-color: #8f8931;
+    }
+    100%{
+        transform: translateX(0);
         background-color: #191200;
     }
 }
@@ -982,10 +1022,10 @@ ul li a .fa-brands{
 
 .navbar ul{
     list-style-type: none;
-    font-size: 22px;
+    font-size: 20px;
     font-family: 'Poppins Medium';
     text-align: center;
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
 .navbar ul li{
@@ -1038,7 +1078,7 @@ ul li a .fa-brands{
 
 .rodape p{
     font-family: 'Poppins Medium';
-    font-size: 22px;
+    font-size: 20px;
     margin: 35px 0;
     padding: 0;
     text-align: center;
@@ -1694,6 +1734,7 @@ ul li a .fa-brands{
 
     .projetos{
         height: 2500px;
+        background-image: none;
     }
 
     .projetos h1{
@@ -1731,6 +1772,7 @@ ul li a .fa-brands{
 
     .contatos-container{
         width: 92%;
+        height: 70%;
     }
 
     .contatos-left{
@@ -1754,10 +1796,14 @@ ul li a .fa-brands{
     }
 
     .contatos-right{
-        height: 48%;
-        width: 80%;
+        height: 60%;
+        width: 100%;
         margin: auto;
         margin-top: 20px;
+    }
+
+    #form{
+        height: 60%;
     }
 
     #form #btn{
@@ -1800,6 +1846,10 @@ ul li a .fa-brands{
 
     .navbar ul li a{
         font-size: 18px;
+    }
+
+    .rodape p{
+        font-size: 19px;
     }
 
     .header-navbar.responsive{
