@@ -155,6 +155,8 @@ function loading(){
 
     load.style.display = 'none'
     content[0].style.display = 'block'
+
+    return true
 }
 
 const display = title
@@ -187,7 +189,6 @@ function typeWrite(){
         } 
 
         if(deletar && j == 0){
-            console.log
             deletar = false
             fraseAtual = []
             i++
@@ -197,50 +198,11 @@ function typeWrite(){
         }
     }
     
-    const spedUp =  Math.random() * (80 -50) + 50
+    const spedUp =  Math.random() * (60 -50) + 50
     const normalSpeed = Math.random() * (300 -200) + 200
     const tempo = fim ? 4000 : deletar ? spedUp : normalSpeed
     setTimeout(() => typeWrite(), tempo)
 }
+if(loading()){
     typeWrite()
-
-    //elemento.innerHTML = '';
-
-    /*textoArray.forEach((letra,i) => {
-       setTimeout(() => elemento.innerHTML += letra, time * i)
-    })
-
-    setTimeout(() =>(console.log('espera'), deleteText()), textoArray.length * time * 1.2)*/
-
-    /*function deleteText(){
-        let a = 1
-        elemento.innerHTML = '';
-        let letras = []
-
-            for(let i = 0; i<textoArray.length; i++){
-                letras[i] = textoArray[i]
-            }
-
-            for(let j=0; j<textoArray.length; j++){
-                setInterval(() => elemento.innerHTML += letras[j], 100)
-            }
-        }*/
-
-/*function repetir(){
-    let cont = 0
-    const textoArray = title.innerHTML.split('');
-    title.innerHTML = '';
-
-    if(cont >= textoArray.length){
-        title.innerHTML = ''
-        cont = 0
-        console.log('entrou')
-    }
-
-    title.innerHTML += textoArray[cont]
-    cont++
-    console.log(cont)
-} */
-//typeWrite(title, 200,2)
-//interval = setInterval(repetir(),1000)
-//typeWrite(subtitle, 75,3)
+}
