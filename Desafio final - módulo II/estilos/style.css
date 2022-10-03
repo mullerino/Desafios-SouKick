@@ -237,13 +237,6 @@ body{
     color: white;
 }
 
-.home-content-left h2::after{
-    content: '|';
-    margin-left: 4px;
-    opacity: 1;
-    animation: piscar .7s infinite;
-}
-
 @keyframes piscar{
     0%, 100%{
         opacity: 1;
@@ -258,6 +251,7 @@ body{
     white-space: nowrap;
     text-align: left;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 .home-content-left h1::after{
@@ -475,7 +469,6 @@ body{
 
 .sobre-content{
     width: 1000px;
-    height: 580px;
     border-radius: 30px;
     margin: auto;
 }
@@ -484,11 +477,13 @@ body{
     display: flex;
     background-color: #000000;
     width: 100%;
+    height: 500px;
     border-radius: 30px;
     margin: auto;
 }
 
 .sobre-content-left{
+    height: 470px;
     border-radius: 30px;
 }
 
@@ -1180,7 +1175,7 @@ ul li a .fa-brands{
 
     .sobre-card{
         width: 100%;
-        height: 570px;
+        height: 490px;
     }
 
     .projetos{
@@ -1242,7 +1237,7 @@ ul li a .fa-brands{
     }
     
     .sobre{
-        height: 1200px;
+        height: 2100px;
     }
 
     .sobre-card{
@@ -1255,18 +1250,12 @@ ul li a .fa-brands{
         background-color: #191200;
     }
 
-    .sobre-content-carrosel{
+    .sobre-content{
         margin: 0;
     }
 
     .sobre-content-left{
         width: 55%;
-        margin: auto;
-    }
-    
-    .sobre-content-left-02{
-        width: 50%;
-        height: 70%;
         margin: auto;
     }
 
@@ -1275,28 +1264,9 @@ ul li a .fa-brands{
         margin: auto;
     }
 
-    .sobre-content-right-02{
-        width: 80%;
-        height: 75%;
-        margin: auto;
-        margin-top: 30px;
-    }
-
     .sobre-content-left img{
         width: 100%;
         height: 90%;
-    }
-    
-    .sobre-content-left-02 img{
-        width: 100%;
-    }
-
-    .voltar-sobre{
-        left: 0;
-    }
-
-    .proximo-sobre{
-        left: 95%;
     }
 
     .projetos{
@@ -1356,25 +1326,25 @@ ul li a .fa-brands{
         height: 970px;
     }
 
-    .sobre-content-carrosel{
+    .sobre-content{
         margin: auto;
         width: 75%;
     }
 
-    .sobre-content-left, .sobre-content-left-02{
+    .sobre-content-left{
         background-color: #000000;
         width: 75%;
         height: 40%;
     }
 
-    .sobre-content-right, .sobre-content-right-02{
+    .sobre-content-right{
         width: 80%;
         height: 55%;
         margin: auto;
         margin-top: 20px;
     }
 
-    .sobre-content-right p, .sobre-content-right-02{
+    .sobre-content-right p{
         font-size: 17px;
     }
 
@@ -1449,24 +1419,24 @@ ul li a .fa-brands{
         height: 970px;
     }
 
-    .sobre-content-carrosel{
+    .sobre-content{
         margin: auto;
         width: 75%;
     }
 
-    .sobre-content-left, .sobre-content-left-02{
+    .sobre-content-left{
         width: 75%;
         height: 40%;
     }
 
-    .sobre-content-right, .sobre-content-right-02{
+    .sobre-content-right{
         width: 80%;
         height: 53%;
         margin: auto;
         margin-top: 20px;
     }
 
-    .sobre-content-right p, .sobre-content-right-02 p{
+    .sobre-content-right p{
         font-size: 14px;
     }
 
@@ -1578,6 +1548,7 @@ ul li a .fa-brands{
     .box-load{
         height: 100vh;
     }
+
     .header-container{
         display: block;
         position: relative;
@@ -1631,7 +1602,7 @@ ul li a .fa-brands{
     }
 
     .sobre{
-        height: 1170px;
+        height: 2100px;
     }
 
     .sobre-card{
@@ -1640,7 +1611,7 @@ ul li a .fa-brands{
         height: 930px;
     }
 
-    .sobre-content-carrosel{
+    .sobre-content{
         width: 95%;
     }
 
@@ -1656,42 +1627,39 @@ ul li a .fa-brands{
         height: 90%;
     }
 
-    .sobre-content-left-02{
-        background-color: #feda00;
-    }
-
-    .sobre-content-right, .sobre-content-right-02{
+    .sobre-content-right{
         width: 85%;
         height: 55%;
         margin: 0;
     }
 
-    .sobre-content-right p, .sobre-content-right-02 p{
+    .sobre-content-right p{
         font-size: 12px;
     }
 
-    .sobre-content-right{
-        background-color: #f7d40bd5;
-    }
-
-    .sobre-content-right-02 p{
-        color: #ffffffe3;
-    }
-
-    .sobre-content-right h2, .sobre-content-right-02 h2{
+    .sobre-content-right h2{
         font-size: 17px;
     }
 
-    .voltar-sobre{
-        font-size: 14px;
-        top: 40%;
-        left: 0;
+    .sobre-valores{
+        margin-top: 0px;
+        width: 100%;
+        height: 790px;
     }
 
-    .proximo-sobre{
-        left: 90%;
-        top: 40%;
+    .sobre-valores h2{
+        font-size: 26px;
+    }
+
+    .valores-card span{
         font-size: 14px;
+    }
+
+    .valores-icon-box{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
     }
 
     .projetos{
