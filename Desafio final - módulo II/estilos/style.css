@@ -181,12 +181,11 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 845px;
-    background-image: url(/assets/Imagens/possessed-photography-JjGXjESMxOY-unsplash.jpg);
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
+    height: 620px;
+    width: 100%;
+    background: rgb(19,19,19);
+    background: linear-gradient(291deg, rgba(19,19,19,1) 0%, rgba(36,36,36,1) 60%, rgba(38,38,38,1) 100%);
+    
 }
 
 .surgir{
@@ -214,6 +213,7 @@ body{
     margin-top: 30px;
     margin-left: 0;
     width: 45%;
+    z-index: 2;
 }
 
 .home-content-left h1{
@@ -324,8 +324,10 @@ body{
 
 .home-content-right-carrosel{
     margin-top: 20px;
-    height: 600px;
+    height: 450px;
+    width: 40%;
     position: relative;
+    border-radius: 100% 0% 90% 10% / 100% 100% 0% 0%;
 }
 
 .prox, .voltar{
@@ -371,8 +373,12 @@ body{
 }
 
 .slide img{
-    border-radius: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 40px;
     height: 100%;
+    width: 100%;
 }
 
 .fade{
@@ -390,6 +396,21 @@ body{
         transform: translate3d(0, 0, 0);
         opacity: 1;
     }
+}
+
+.forma-fundo{
+    width: 60%;
+    height: 640px;
+    position: absolute;
+    left: 0;
+    background-image: url(/assets/Imagens/Oficinas/projetos-oficinas.jpg);
+    background-position: left;
+    background-position-y: top;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    border-radius:0% 100% 0% 61% / 10% 56% 46% 0% ;
 }
 
 .sobre{
@@ -1070,7 +1091,7 @@ ul li a .fa-brands{
 
 @media screen and (max-width: 1550px) {
     .home-content{
-        height: 780px;
+        height: 640px;
     }
     .home-content-right-carrosel{
         height: 480px;
