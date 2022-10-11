@@ -324,10 +324,10 @@ body{
 
 .home-content-right-carrosel{
     margin-top: 20px;
-    height: 450px;
+    height: 200px;
     width: 40%;
     position: relative;
-    border-radius: 100% 0% 90% 10% / 100% 100% 0% 0%;
+    border-radius: 50%;
 }
 
 .prox, .voltar{
@@ -373,12 +373,9 @@ body{
 }
 
 .slide img{
-    border-top-left-radius: 20px;
-    border-top-right-radius: 60px;
-    border-bottom-left-radius: 80px;
-    border-bottom-right-radius: 40px;
-    height: 100%;
-    width: 100%;
+    border-radius: 60%;
+    height: 10%;
+    width: 70%;
 }
 
 .fade{
@@ -1094,12 +1091,44 @@ ul li a .fa-brands{
         height: 640px;
     }
     .home-content-right-carrosel{
-        height: 480px;
-        margin-right: 14px; 
+        height: 90%;
+        width: 250px;
+        gap: 50px;
+        position: relative;
     }
 
     .slide img{
-        height: 100%;
+        height: 30%;
+    }
+
+    .slide img:hover{
+        z-index: 3;
+        transform: scale(1.4);
+        transition: transform 0.7s ease-in-out;
+    }
+
+    .img-inicial{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .img-1-meio{
+        position: absolute;
+        top: 90px;
+        left: 0;
+    }
+
+    .img-2-meio{
+        position: absolute;
+        top: 200px;
+        left: 0;
+    }
+
+    .img-fim{
+        position: absolute;
+        top: 300px;
+        left: 0;
     }
 
     .sobre-content-carrosel{
@@ -1174,7 +1203,8 @@ ul li a .fa-brands{
     }
 
     .home-content-right-carrosel{
-        height: 440px;
+        height: 200px;
+        width: 240px;
         margin: 0 20px 20px 15px;
     }
 
