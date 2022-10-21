@@ -6,12 +6,10 @@ const forms = document.getElementById('form')
 const subtitle = document.querySelector('h2')
 const title = document.querySelector('.line')
 
-mostrarSlide(slidePos)
-slideAut = setInterval(passarSlideAut,4500)
-mostrarSlideSobre(slidePosSobre)
-
-
-function mostrarSlide(n){
+//mostrarSlide(slidePos)
+//slideAut = setInterval(passarSlideAut,4500)
+//mostrarSlideSobre(slidePosSobre)
+/*function mostrarSlide(n){
     let pontos = document.getElementsByClassName("ponto")
     let slides = document.getElementsByClassName("slide")
 
@@ -32,7 +30,7 @@ function mostrarSlide(n){
     }
 
     pontos[slidePos-1].className += ' active'
-    slides[slidePos-1].style.display = 'block'
+    //slides[slidePos-1].style.display = 'block'
 }
 
 function passarSlide(n){
@@ -68,7 +66,7 @@ function passarSlideAut(){
     }
 
     pontos[slidePosAut-1].className += ' active'
-    slides[slidePosAut-1].style.display = 'block'
+    //slides[slidePosAut-1].style.display = 'block'
 
     slidePosAut+=1
 }
@@ -94,6 +92,7 @@ function mostrarSlideSobre(n){
 function passarSlideSobre(n){
     mostrarSlideSobre(slidePosSobre+=n)
 }
+*/
 
 function confirmarEnvio(){
     let inputName = document.getElementById('nome')
