@@ -177,7 +177,6 @@ function typeWrite(){
             display.innerHTML = fraseAtual.join('')
         }
         if(deletar){
-            console.log('delete')
             fraseAtual.pop(frase[i])
             j--
             display.innerHTML = fraseAtual.join('')
@@ -202,6 +201,40 @@ function typeWrite(){
     const tempo = fim ? 4000 : deletar ? spedUp : normalSpeed
     setTimeout(() => typeWrite(), tempo)
 }
+
 if(loading()){
     typeWrite()
 }
+
+roboBaixo = document.getElementsByClassName('robo-anima')
+roboCima = document.getElementsByClassName('robo-animaa')
+moverDir = document.getElementsByClassName('move')
+moverEsq = document.getElementsByClassName('moveb')
+
+function playAnim(robo,tipo_anim){
+    if(loading()){
+        tipo_anim[0].style.animationPlayState = 'running'
+        robo[0].style.display = 'block'
+    }
+}
+
+function stopAnim(robo,tipo_anim){
+    tipo_anim[0].style.animationPlayState = 'paused'
+    robo[0].style.display = 'none'
+}
+
+playAnim(roboCima, moverEsq)
+
+setInterval(function(){
+    stopAnim(roboCima, moverEsq)
+    setTimeout(function(){
+        playAnim(roboBaixo, moverDir)
+        setTimeout(function(){
+            stopAnim(roboBaixo, moverDir)
+            playAnim(roboCima, moverEsq)
+        }, 3000)
+    }, 3000)
+}, 4000)
+
+
+
