@@ -349,6 +349,56 @@ body{
     border-radius: 0 2% 2% 0;
 }
 
+.robo-anima, .robo-animaa{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+    display: none;
+}
+
+.robo-animaa{
+    top: 630px;
+}
+
+.robo-anima img, .robo-animaa img{
+    width: 100%;
+}
+
+.move{
+    animation: mover 4s infinite linear;
+    animation-play-state: paused;
+    transition: mover 2s ease-in;
+}
+
+.moveb{
+    animation: moverc 4s infinite linear;
+    animation-play-state: paused;
+    transition: moverc 1s ease-in;
+}
+
+@keyframes mover{
+    0%{
+        top: 630px;
+        transform: translateX(-30px);
+    }
+    100%{
+        top: 630px;
+        transform: translateX(1420px);
+    }
+}
+
+@keyframes moverc{
+    0%{
+        top: 180px;
+        transform: translateX(1320px);
+    }
+    100%{
+        top: 180px;
+        transform: translateX(-20px);
+    }
+}
+
 .home-content-right-carrosel{
     margin-top: 20px;
     height: 200px;
