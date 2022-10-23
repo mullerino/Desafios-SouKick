@@ -202,16 +202,12 @@ function typeWrite(){
     setTimeout(() => typeWrite(), tempo)
 }
 
-if(loading()){
-    typeWrite()
-}
-
-roboBaixo = document.getElementsByClassName('robo-anima')
-roboCima = document.getElementsByClassName('robo-animaa')
+roboBaixo = document.getElementsByClassName('robo-animaa')
+roboCima = document.getElementsByClassName('robo-anima')
 moverDir = document.getElementsByClassName('move')
 moverEsq = document.getElementsByClassName('moveb')
 
-function playAnim(robo,tipo_anim){
+/*function playAnim(robo,tipo_anim){
     if(loading()){
         tipo_anim[0].style.animationPlayState = 'running'
         robo[0].style.display = 'block'
@@ -224,17 +220,48 @@ function stopAnim(robo,tipo_anim){
 }
 
 playAnim(roboCima, moverEsq)
+*/
+
+var largura = window.innerWidth
+document.documentElement.clientWidth
+document.body.clientWidth;
+
+console.log(largura);
+
+
+function moverRobo(){
+    let i = 0
+    let j = 0
+    let c = 0
+        roboCima[0].style.display = 'block'
+        setInterval(function(){
+            roboCima[0].style.transform = `translateX(${i}px)`
+            if(roboCima[0].style.transform == 'translateX(1420px)'){
+                roboCima[0].style.display = 'none'
+                c = 1
+            }
+            else{
+                i++
+            }
+            if(c==1){
+                roboBaixo[0].style.display = 'block'
+                roboBaixo[0].style.transform = `translateX(${j}px)`
+                if(roboBaixo[0].style.transform == 'translateX(-1400px)'){
+                    roboBaixo[0].style.display = 'none'
+                }
+                else{
+                    j = j-1;
+                }
+            }
+        },0.01)
+}
 
 setInterval(function(){
-    stopAnim(roboCima, moverEsq)
-    setTimeout(function(){
-        playAnim(roboBaixo, moverDir)
-        setTimeout(function(){
-            stopAnim(roboBaixo, moverDir)
-            playAnim(roboCima, moverEsq)
-        }, 3000)
-    }, 3000)
-}, 4000)
-
-
-
+    if(largura >= 1500){
+        moverRobo()
+        if(loading()){
+            title.innerHTML = ''
+            typeWrite()
+        }
+}
+}, 100) 
