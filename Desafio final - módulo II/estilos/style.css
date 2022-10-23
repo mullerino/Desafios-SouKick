@@ -245,15 +245,6 @@ body{
     animation: piscar 1s steps(40) infinite;
 }
 
-@keyframes blinkCursor{
-    from{
-        border-right-color: rgba(255, 255, 255, 0.75);
-    }
-    to{
-        border-right-color: transparent;
-    }
-}
-
 @keyframes digitando{
     from{
         width: 0;
@@ -283,7 +274,6 @@ body{
     margin: 0 auto;
     white-space: nowrap;
     text-align: left;
-    overflow: hidden;
     white-space: nowrap;
 }
 
@@ -353,12 +343,17 @@ body{
     height: 100px;
     width: 100px;
     position: absolute;
-    left: 0;
     display: none;
+}
+
+.robo-anima{
+    top: 180px;
+    left: 0;
 }
 
 .robo-animaa{
     top: 630px;
+    right: 0;
 }
 
 .robo-anima img, .robo-animaa img{
@@ -1298,7 +1293,7 @@ ul li a .fa-brands{
 @media screen and (max-width: 1050px) {
     .home-content{
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         height: 700px;
     }   
 
@@ -1331,7 +1326,7 @@ ul li a .fa-brands{
     }
     
     .sobre{
-        height: 2100px;
+        height: 1700px;
     }
 
     .sobre-card{
@@ -1414,6 +1409,10 @@ ul li a .fa-brands{
         display: none;
     }
 
+    .line{
+        overflow: hidden;
+    }
+
     .sobre-card{
         flex-direction: column;
         background-color:#191200;
@@ -1472,26 +1471,42 @@ ul li a .fa-brands{
         height: 840px;
     }
 
+    .forma-fundo{
+        width: 90%;
+        height: 360px;
+        left: 10%;
+        top: 550px;
+        background-image: url(/assets/Imagens/Oficinas/Orange\ Dark\ Grey\ Watercolor\ Night\ Sky\ Linktree\ Background.png);
+        background-position: left;
+        background-position-y: top;
+        opacity: 0.95;
+        background-size: contain;
+    }
+
     .header-container{
         justify-content: space-between;
         background-color: #feda00;
         width: 100%;
         height: 110px;
     }
+
     .header-logo{
         height: 100px;
         width: 85px;
         margin: 0 3px;
     }
+    
     .header-logo img{
         height: 100%;
         width: 100%;
     }
+
     .header-navbar ul{
         font-size: 18px;
         padding: 0;
         display: none;
     }
+
     .header-navbar ul li{
         margin: 0;
         padding: 0 20px;
@@ -1502,6 +1517,27 @@ ul li a .fa-brands{
         font-size: 42px;
         cursor: pointer;
         margin: 0 8px;
+    }
+
+    .home-content-left{
+        margin-top: 80px;
+    }
+
+    .home-content-left h1{
+        font-size: 41px;
+    }
+
+    .home-content-left h2{
+        margin-top: 30px;
+        font-size: 24px;
+    }
+
+    .line{
+        text-align: center;
+    }
+
+    .home-content-left h1::after{
+        content: '';
     }
 
     .sobre h1{
@@ -1662,6 +1698,11 @@ ul li a .fa-brands{
         position: relative;
     }
 
+    .line{
+        white-space: initial;
+        text-align: center;
+    }
+
     .forma-fundo{
         width: 100%;
         height: 270px;
@@ -1677,7 +1718,6 @@ ul li a .fa-brands{
         /*border-radius:0% 100% 0% 61% / 10% 56% 46% 0% ;*/
         border-radius: 0 2% 2% 0;
     }
-    
     
     .home-content-left{
         width: 80%;
