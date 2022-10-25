@@ -225,43 +225,56 @@ playAnim(roboCima, moverEsq)
 var largura = window.innerWidth
 document.documentElement.clientWidth
 document.body.clientWidth;
-
-console.log(largura);
-
+var test = ''
+let x = 0 
 
 function moverRobo(){
     let i = 0
     let j = 0
-    let c = 0
-        roboCima[0].style.display = 'block'
-        setInterval(function(){
-            roboCima[0].style.transform = `translateX(${i}px)`
-            if(roboCima[0].style.transform == 'translateX(1420px)'){
-                roboCima[0].style.display = 'none'
-                c = 1
+    let c = 2
+
+    roboCima[0].style.transform = 'translateX(0px)'
+    roboBaixo[0].style.transform = 'translateX(0px)'
+    roboCima[0].style.display = 'block'
+   
+    move = setInterval(function(){
+        roboCima[0].style.transform = `translateX(${i}px)`
+
+        if(roboCima[0].style.transform == 'translateX(1420px)'){
+            roboCima[0].style.display = 'none'
+            roboCima[0].style.transform = 'translateX(0px)'
+            c = 1
+        }
+        else{
+            i = i + 1
+        }
+        if(c == 1){
+            console.log('ccc')
+            roboBaixo[0].style.display = 'block'
+            roboBaixo[0].style.transform = `translateX(${j}px)`
+            if(roboBaixo[0].style.transform == 'translateX(-1425px)'){
+                roboBaixo[0].style.display = 'none'
+                roboBaixo[0].style.transform = 'translateX(0px)'
+                clearInterval(move)
+                c = 0
             }
             else{
-                i++
+                j = j-1;
             }
-            if(c==1){
-                roboBaixo[0].style.display = 'block'
-                roboBaixo[0].style.transform = `translateX(${j}px)`
-                if(roboBaixo[0].style.transform == 'translateX(-1400px)'){
-                    roboBaixo[0].style.display = 'none'
-                }
-                else{
-                    j = j-1;
-                }
+            
+            if(c == 0){
+                moverRobo()
             }
-        },0.01)
+        }
+        //}
+    }, 0.01)
 }
 
-setInterval(function(){
-    if(largura >= 1500){
-        moverRobo()
-        if(loading()){
-            title.innerHTML = ''
-            typeWrite()
-        }
+
+if(largura >= 1500){
+    var m = setInterval(moverRobo(), 100)
+    if(loading()){
+        title.innerHTML = ''
+        typeWrite()
+    }
 }
-}, 100) 
