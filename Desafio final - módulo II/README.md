@@ -23,16 +23,16 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Deixar todo o projeto responsivo
 - [x] Ajustar animações para o site responsivo
 - [x] Criar loading page
-- [ ] Alterar tamanho dos cards-projeto para tela de dispositivo móvel
-- [ ] Ajustar tela de loading para dispositivos móveis
+- [x] Alterar tamanho dos cards-projeto para tela de dispositivo móvel
+- [x] Ajustar tela de loading para dispositivos móveis
 
 ## 🛠️ Construído com
 
 * [Visual Studio Code](https://code.visualstudio.com/) - Editor de código-fonte
 * [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML) - Usado para a marcação de texto
 * [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) - Usado para estilizar o projeto
-* [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) - Usado para construir a dinamicidade do carrosel
-* [Figma](https://figma.com/) - Usado para criar o template da interface
+* [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) - Usado para construir a dinamicidade da página
+* [Figma](https://figma.com/) - Usado para criar o layout da página
 
 ## 🤝 Colaboradores
 <table>
