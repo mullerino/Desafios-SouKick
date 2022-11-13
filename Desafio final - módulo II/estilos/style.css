@@ -78,7 +78,8 @@ body{
 }
 
 #header{
-    height: 130px;
+    height: 120px;
+    
 }
 
 .header-container{
@@ -86,21 +87,22 @@ body{
     align-items: center;
     justify-content: space-around;
     background-color: #feda00;
-    height: 130px;
+    height: 120px;
 }
 
 .header-logo{
     width: 90px;
-    margin-top: 10px;
+    height: 105px;
 }
 
 .header-logo:hover{
-    transform: scale(1.05);
+    transform: scale(1.04);
     transition: transform 0.3s ease-in;
 }
 
 .header-logo img{
     width: 100%;
+    height: 100%;
     text-align: center;
 }
 
@@ -179,14 +181,18 @@ body{
 
 .home-content{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    height: 845px;
-    background-image: url(/assets/Imagens/possessed-photography-JjGXjESMxOY-unsplash.jpg);
-    background-position:center;
+    height: 620px;
+    width: 100%;
+    background: rgb(19,19,19);
+    background-color: #feda00;
+    background-image: url(/assets/Imagens/Oficinas/fundo-home.png);
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: scroll;
+    
+    /*background: linear-gradient(291deg, rgba(19,19,19,1) 0%, rgba(36,36,36,1) 70%, rgba(38,38,38,1) 100%);*/
 }
 
 .surgir{
@@ -212,22 +218,40 @@ body{
 
 .home-content-left{
     margin-top: 30px;
-    margin-left: 0;
+    margin-left: 100px;
     width: 45%;
+    z-index: 2;
 }
 
 .home-content-left h1{
     font-size: 50px;
     font-family: 'Poppins SemiBold';
     text-transform: uppercase;
-    color: #fcde33;
+    /*color: #fcde33;*/
+    color: whitesmoke;
 }
 
 .home-content-left h1:hover{
     transition: color 0.6s ease;
-    color: #feda00;
+    /*color: #feda00;*/
     transform: scale(1.02);
     transition: transform 0.5s ease-out;
+}
+
+.home-content-left h1::after{
+    content: '|';
+    margin-left: 3px;
+    color: #030300;
+    animation: piscar 1s steps(40) infinite;
+}
+
+@keyframes digitando{
+    from{
+        width: 0;
+    } 
+    to{
+        width: 14em;
+    }
 }
 
 .home-content-left h2{
@@ -235,13 +259,6 @@ body{
     font-family: 'Poppins SemiBold';
     text-transform: uppercase;
     color: white;
-}
-
-.home-content-left h2::after{
-    content: '|';
-    margin-left: 4px;
-    opacity: 1;
-    animation: piscar .7s infinite;
 }
 
 @keyframes piscar{
@@ -257,32 +274,7 @@ body{
     margin: 0 auto;
     white-space: nowrap;
     text-align: left;
-    overflow: hidden;
-}
-
-.home-content-left h1::after{
-    content: '|';
-    margin-left: 3px;
-    color: #fcde33;
-    animation: piscar 1s steps(40) infinite;
-}
-
-@keyframes blinkCursor{
-    from{
-        border-right-color: rgba(255, 255, 255, 0.75);
-    }
-    to{
-        border-right-color: transparent;
-    }
-}
-
-@keyframes digitando{
-    from{
-        width: 0;
-    } 
-    to{
-        width: 14em;
-    }
+    white-space: nowrap;
 }
 
 .home-content-left button{
@@ -297,19 +289,22 @@ body{
     cursor: pointer;
 }
 
-.home-content-left button a {
+.home-content-left button a{
     text-decoration: none;
     color:#030300;
 }
 
 .home-content-left button:hover{
     transition: background-color 0.4s ease-in, transform 0.1s ease-out;
-    color: #2c0e70;
-    background-color: #feda00;
+    color: white;
+    background-color: #2c0e70;;
     transform: scale(1.02);
     animation: shake 0.9s cubic-bezier(.36,.07,.19,.97) both;
 }
 
+.home-content-left button:hover a{
+    color: white;
+}
 @keyframes shake{
     10%, 90% {
         transform: translate3d(-1px, 0, 0);
@@ -328,29 +323,83 @@ body{
       }
 }
 
+.forma-fundo{
+    width: 60%;
+    height: 640px;
+    position: absolute;
+    left: 40%;
+    background-image: url(/assets/Imagens/Oficinas/Orange\ Dark\ Grey\ Watercolor\ Night\ Sky\ Linktree\ Background.png);
+    background-position: left;
+    background-position-y: top;
+    opacity: 0.95;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    /*border-radius:0% 100% 0% 61% / 10% 56% 46% 0% ;*/
+    border-radius: 0 2% 2% 0;
+}
+
+.robo-anima, .robo-animaa{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    display: none;
+}
+
+.robo-anima{
+    top: 180px;
+    left: 0;
+}
+
+.robo-animaa{
+    top: 630px;
+    right: 0;
+}
+
+.robo-anima img, .robo-animaa img{
+    width: 100%;
+}
+
+.move{
+    animation: mover 4s infinite linear;
+    animation-play-state: paused;
+    transition: mover 2s ease-in;
+}
+
+.moveb{
+    animation: moverc 4s infinite linear;
+    animation-play-state: paused;
+    transition: moverc 1s ease-in;
+}
+
+@keyframes mover{
+    0%{
+        top: 630px;
+        transform: translateX(-30px);
+    }
+    100%{
+        top: 630px;
+        transform: translateX(1420px);
+    }
+}
+
+@keyframes moverc{
+    0%{
+        top: 180px;
+        transform: translateX(1320px);
+    }
+    100%{
+        top: 180px;
+        transform: translateX(-20px);
+    }
+}
+
 .home-content-right-carrosel{
     margin-top: 20px;
-    height: 600px;
+    height: 200px;
+    width: 40%;
     position: relative;
-}
-
-.prox, .voltar{
-    font-size: 18px;
-    position: absolute;
-    color: white;
-    width: auto;
-    padding: 16px;
-    cursor: pointer;
-    font-weight: bold;
-    top: 50%;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    transition: 0.4s ease-in;
-}
-
-.prox{
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 50%;
 }
 
 .ponto{
@@ -368,17 +417,14 @@ body{
     background-color: #717171;;
 }
 
-.prox:hover, .voltar:hover{
-    background-color: rgba(0, 0, 0, 0.85);
-}
-
 .home-content-right-carrosel .slide{
     height: 100%;
 }
 
 .slide img{
-    border-radius: 30px;
-    height: 100%;
+    border-radius: 60%;
+    height: 10%;
+    width: 70%;
 }
 
 .fade{
@@ -399,7 +445,7 @@ body{
 }
 
 .sobre{
-    height: 975px;
+    height: 1375px;
     background-color: #191200;
     background-image: url(/assets/Imagens/fundo-sobre.png);
     background-position:left;
@@ -473,23 +519,22 @@ body{
     }
 }
 
-.sobre-content-carrosel{
-    width: 1350px;
-    border-radius: 30px;
+.sobre-content{
+    width: 1100px;
     margin: auto;
-    position: relative;
 }
 
 .sobre-card{
     display: flex;
     background-color: #000000;
-    width: 1350px;
-    height: 560px;
+    width: 100%;
+    height: 100%;
     border-radius: 30px;
     margin: auto;
 }
 
 .sobre-content-left{
+    height: 470px;
     border-radius: 30px;
 }
 
@@ -501,8 +546,6 @@ body{
 .sobre-content-right{
     background-color: #feda00;
     border-radius: 10px;
-    height: 100%;
-    width: 100%;
 }
 
 .sobre-content-right h2{
@@ -518,91 +561,54 @@ body{
     text-align: justify;
 }
 
-.sobre-content-left-02{
-    width: 55%;
+.sobre-valores{
+    margin-top: 130px;
+    width: 100%;
+    height: 250px;
+    background-color: #feda00;
 }
 
-.sobre-content-left-02 img{
+.sobre-valores h2{
+    text-align: center;
+    padding: 25px 0 10px 0;
+    font-family: 'Built Titling BD';
+    font-size: 35px;
+}
+
+.valores-icon-box{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+}
+
+.valores-icon-box span{
+    font-size: 17px;
+    font-family: 'Poppins Medium';
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.valores-card{
+    height: 100%;
+    text-align: center;
+}
+
+.icon{
+    height: 100px;
+    width: 100px;
+}
+
+.icon img{
     width: 100%;
     height: 100%;
-    border-radius: 30px;
 }
 
-.sobre-content-right-02{
-    background-color: #000000;
-    border-radius: 30px;
-    height: 100%;
-    width: 45%;
-}
-
-.sobre-content-right-02 h2{
-    text-align: center;
-    font-family: 'Retroica';
-    color: white;
-}
-
-.sobre-content-right-02 h2 img{
-    height: 30px;
-    width: 40px;
-    padding-left: 10px;
-}
-
-.sobre-content-right-02 p{
-    padding: 0 33px;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: 'Poppins Medium';
-    text-align: justify;
-    color: white;
-}
-
-.voltar-sobre, .proximo-sobre{
-    position: absolute;
-    top: 50%;
-    font-size: 28px;
-    color: white;
-    width: auto;
-    padding: 16px;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 10px;
-    user-select: none;
-    transition: background-color .5s ease-in;
-}
-
-.voltar-sobre{
-    right: 100%;
-}
-
-.proximo-sobre{
-    left: 100%;
-}
-
-.voltar-sobre:hover, .proximo-sobre:hover{
-    background-color: rgba(0, 0, 0, 0.75);
-}
-
-.pass{
-    animation-name: passar;
-    animation-duration: 1.8s;
-    transition: passar 0.9s ease-in;
-}
-
-@keyframes passar{
-    0%{
-        margin-left: -90px;
-        opacity: 0.35;
-    }
-    50%{
-        opacity: 0.7;
-    }
-    75%{
-        opacity: 0.85;
-    }
-    100%{
-        margin-left: 0px;
-        opacity: 1;
-    }
+.valores-card:hover{
+    transform: scale(1.1);
+    transition: transform .3s ease-in;
 }
 
 .projetos{
@@ -696,7 +702,7 @@ body{
 }
 
 .projetos-cards-MAAP:hover{
-    transform: scale(1.06);
+    transform: scale(1.03);
     transition: transform .5s ease-in;
 }
 
@@ -1113,15 +1119,51 @@ ul li a .fa-brands{
 
 @media screen and (max-width: 1550px) {
     .home-content{
-        height: 780px;
+        height: 640px;
     }
     .home-content-right-carrosel{
-        height: 480px;
-        margin-right: 14px; 
+        height: 85%;
+        width: 400px;
+        gap: 50px;
+        position: relative;
     }
 
     .slide img{
-        height: 100%;
+        height: 33%;
+        width: 45%;
+    }
+
+    .slide img:hover{
+        z-index: 3;
+        transform: scale(1.25);
+        transition: transform 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+
+    .slide img:hover .home-content-right-carrosel{
+        background-color: blue;
+    }
+    .img-1{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .img-2{
+        position: absolute;
+        top: 110px;
+        right: 60px;
+    }
+
+    .img-3{
+        position: absolute;
+        top: 230px;
+        right: 120px;
+    }
+
+    .img-4{
+        position: absolute;
+        top: 350px;
+        right: 190px;
     }
 
     .sobre-content-carrosel{
@@ -1131,7 +1173,6 @@ ul li a .fa-brands{
 
     .sobre-card{
         width: 100%;
-        height: 540px;
     }
 
     .sobre-content-left, .sobre-content-left-02{
@@ -1196,7 +1237,8 @@ ul li a .fa-brands{
     }
 
     .home-content-right-carrosel{
-        height: 440px;
+        height: 200px;
+        width: 240px;
         margin: 0 20px 20px 15px;
     }
 
@@ -1218,7 +1260,7 @@ ul li a .fa-brands{
 
     .sobre-card{
         width: 100%;
-        height: 570px;
+        height: 490px;
     }
 
     .projetos{
@@ -1247,9 +1289,9 @@ ul li a .fa-brands{
 @media screen and (max-width: 1050px) {
     .home-content{
         flex-direction: column;
-        justify-content: center;
-        height: 1100px;
-    }
+        justify-content: flex-start;
+        height: 700px;
+    }   
 
     .home-content-left{
         width: 80%;
@@ -1280,7 +1322,7 @@ ul li a .fa-brands{
     }
     
     .sobre{
-        height: 1200px;
+        height: 1700px;
     }
 
     .sobre-card{
@@ -1293,18 +1335,12 @@ ul li a .fa-brands{
         background-color: #191200;
     }
 
-    .sobre-content-carrosel{
+    .sobre-content{
         margin: 0;
     }
 
     .sobre-content-left{
         width: 55%;
-        margin: auto;
-    }
-    
-    .sobre-content-left-02{
-        width: 50%;
-        height: 70%;
         margin: auto;
     }
 
@@ -1313,28 +1349,9 @@ ul li a .fa-brands{
         margin: auto;
     }
 
-    .sobre-content-right-02{
-        width: 80%;
-        height: 75%;
-        margin: auto;
-        margin-top: 30px;
-    }
-
     .sobre-content-left img{
         width: 100%;
         height: 90%;
-    }
-    
-    .sobre-content-left-02 img{
-        width: 100%;
-    }
-
-    .voltar-sobre{
-        left: 0;
-    }
-
-    .proximo-sobre{
-        left: 95%;
     }
 
     .projetos{
@@ -1388,31 +1405,35 @@ ul li a .fa-brands{
         display: none;
     }
 
+    .line{
+        overflow: hidden;
+    }
+
     .sobre-card{
         flex-direction: column;
         background-color:#191200;
         height: 970px;
     }
 
-    .sobre-content-carrosel{
+    .sobre-content{
         margin: auto;
         width: 75%;
     }
 
-    .sobre-content-left, .sobre-content-left-02{
+    .sobre-content-left{
         background-color: #000000;
         width: 75%;
         height: 40%;
     }
 
-    .sobre-content-right, .sobre-content-right-02{
+    .sobre-content-right{
         width: 80%;
         height: 55%;
         margin: auto;
         margin-top: 20px;
     }
 
-    .sobre-content-right p, .sobre-content-right-02{
+    .sobre-content-right p{
         font-size: 17px;
     }
 
@@ -1446,26 +1467,41 @@ ul li a .fa-brands{
         height: 840px;
     }
 
+    .forma-fundo{
+        width: 90%;
+        left: 6%;
+        top: 460px;
+        background-image: url(/assets/Imagens/Oficinas/Orange\ Dark\ Grey\ Watercolor\ Night\ Sky\ Linktree\ Background.png);
+        background-position: left;
+        background-position-y: top;
+        opacity: 0.95;
+        background-size: contain;
+    }
+
     .header-container{
         justify-content: space-between;
         background-color: #feda00;
         width: 100%;
         height: 110px;
     }
+
     .header-logo{
         height: 100px;
         width: 85px;
         margin: 0 3px;
     }
+    
     .header-logo img{
         height: 100%;
         width: 100%;
     }
+
     .header-navbar ul{
         font-size: 18px;
         padding: 0;
         display: none;
     }
+
     .header-navbar ul li{
         margin: 0;
         padding: 0 20px;
@@ -1478,6 +1514,27 @@ ul li a .fa-brands{
         margin: 0 8px;
     }
 
+    .home-content-left{
+        margin-top: 80px;
+    }
+
+    .home-content-left h1{
+        font-size: 41px;
+    }
+
+    .home-content-left h2{
+        margin-top: 30px;
+        font-size: 24px;
+    }
+
+    .line{
+        text-align: center;
+    }
+
+    .home-content-left h1::after{
+        content: '';
+    }
+
     .sobre h1{
         font-size: 36px;
     }
@@ -1487,24 +1544,24 @@ ul li a .fa-brands{
         height: 970px;
     }
 
-    .sobre-content-carrosel{
+    .sobre-content{
         margin: auto;
         width: 75%;
     }
 
-    .sobre-content-left, .sobre-content-left-02{
+    .sobre-content-left{
         width: 75%;
         height: 40%;
     }
 
-    .sobre-content-right, .sobre-content-right-02{
+    .sobre-content-right{
         width: 80%;
         height: 53%;
         margin: auto;
         margin-top: 20px;
     }
 
-    .sobre-content-right p, .sobre-content-right-02 p{
+    .sobre-content-right p{
         font-size: 14px;
     }
 
@@ -1616,6 +1673,7 @@ ul li a .fa-brands{
     .box-load{
         height: 100vh;
     }
+
     .header-container{
         display: block;
         position: relative;
@@ -1625,6 +1683,34 @@ ul li a .fa-brands{
         position: absolute;
         right: 0;
         top: 35px;
+    }
+
+    .home-content{
+        background-image: url(/assets/Imagens/Oficinas/fundo-home-movel.png);
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+    }
+
+    .line{
+        white-space: initial;
+        text-align: center;
+    }
+
+    .forma-fundo{
+        width: 100%;
+        height: 270px;
+        left: 0px;
+        top: 67%;
+        background-image: url(/assets/Imagens/Oficinas/Orange\ Dark\ Grey\ Watercolor\ Night\ Sky\ Linktree\ Background.png);
+        background-position: left;
+        background-position-y: top;
+        opacity: 0.95;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
+        border-radius: 0 2% 2% 0;
     }
     
     .home-content-left{
@@ -1669,7 +1755,7 @@ ul li a .fa-brands{
     }
 
     .sobre{
-        height: 1170px;
+        height: 2100px;
     }
 
     .sobre-card{
@@ -1678,13 +1764,13 @@ ul li a .fa-brands{
         height: 930px;
     }
 
-    .sobre-content-carrosel{
+    .sobre-content{
         width: 95%;
     }
 
     .sobre-content-left, .sobre-content-left-02{
         width: 85%;
-        height: 28%;
+        height: 30%;
         margin: 10px 0 0 0;
         border-radius: 20px;
     }
@@ -1694,42 +1780,39 @@ ul li a .fa-brands{
         height: 90%;
     }
 
-    .sobre-content-left-02{
-        background-color: #feda00;
-    }
-
-    .sobre-content-right, .sobre-content-right-02{
+    .sobre-content-right{
         width: 85%;
-        height: 55%;
+        height: 380px;
         margin: 0;
     }
 
-    .sobre-content-right p, .sobre-content-right-02 p{
+    .sobre-content-right p{
         font-size: 12px;
     }
 
-    .sobre-content-right{
-        background-color: #f7d40bd5;
-    }
-
-    .sobre-content-right-02 p{
-        color: #ffffffe3;
-    }
-
-    .sobre-content-right h2, .sobre-content-right-02 h2{
+    .sobre-content-right h2{
         font-size: 17px;
     }
 
-    .voltar-sobre{
-        font-size: 14px;
-        top: 40%;
-        left: 0;
+    .sobre-valores{
+        margin-top: 0px;
+        width: 100%;
+        height: 790px;
     }
 
-    .proximo-sobre{
-        left: 90%;
-        top: 40%;
+    .sobre-valores h2{
+        font-size: 26px;
+    }
+
+    .valores-card span{
         font-size: 14px;
+    }
+
+    .valores-icon-box{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
     }
 
     .projetos{

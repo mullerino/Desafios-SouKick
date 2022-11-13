@@ -1,99 +1,6 @@
-let slidePos = 1;
-let slidePosAut = 1;
-let slideAut
-let slidePosSobre = 1
 const forms = document.getElementById('form')
 const subtitle = document.querySelector('h2')
 const title = document.querySelector('.line')
-
-mostrarSlide(slidePos)
-slideAut = setInterval(passarSlideAut,4500)
-mostrarSlideSobre(slidePosSobre)
-
-
-function mostrarSlide(n){
-    let pontos = document.getElementsByClassName("ponto")
-    let slides = document.getElementsByClassName("slide")
-
-    if(n>slides.length){
-        slidePos = 1;
-    }
-
-    if(n<=0){
-        slidePos = slides.length;
-    }
-
-    for(let i =0; i<slides.length;i++){
-        slides[i].style.display = 'none'
-    }
-
-    for(let i =0; i<pontos.length;i++){
-        pontos[i].className = pontos[i].className.replace('active','')
-    }
-
-    pontos[slidePos-1].className += ' active'
-    slides[slidePos-1].style.display = 'block'
-}
-
-function passarSlide(n){
-    clearInterval(slideAut)
-    mostrarSlide(slidePos+=n)
-    slideAut = setInterval(passarSlideAut,4500)
-}
-
-function passarSlidePonto(n){
-    clearInterval(slideAut)
-    mostrarSlide(slidePos=n)
-    slideAut = setInterval(passarSlideAut,4500)
-}
-
-function passarSlideAut(){
-    let pontos = document.getElementsByClassName("ponto")
-    let slides = document.getElementsByClassName("slide")
-
-    if(slidePosAut>slides.length){
-        slidePosAut = 1;
-    }
-
-    if(slidePosAut<=0){
-        slidePosAut = slides.length;
-    }
-
-    for(let i =0; i<slides.length;i++){
-        slides[i].style.display = 'none'
-    }
-
-    for(let i =0; i<pontos.length;i++){
-        pontos[i].className = pontos[i].className.replace('active','')
-    }
-
-    pontos[slidePosAut-1].className += ' active'
-    slides[slidePosAut-1].style.display = 'block'
-
-    slidePosAut+=1
-}
-
-function mostrarSlideSobre(n){
-    let slidesSobre = document.getElementsByClassName('sobre-card');
-
-    if(n>slidesSobre.length){
-        slidePosSobre = 1;
-    }
-
-    if(n<=0){
-        slidePosSobre = slidesSobre.length
-    }
-
-    for(let i = 0; i<slidesSobre.length; i++){
-        slidesSobre[i].style.display = 'none'
-    }
-
-    slidesSobre[slidePosSobre-1].style.display = 'flex'
-}
-
-function passarSlideSobre(n){
-    mostrarSlideSobre(slidePosSobre+=n)
-}
 
 function confirmarEnvio(){
     let inputName = document.getElementById('nome')
@@ -178,7 +85,6 @@ function typeWrite(){
             display.innerHTML = fraseAtual.join('')
         }
         if(deletar){
-            console.log('delete')
             fraseAtual.pop(frase[i])
             j--
             display.innerHTML = fraseAtual.join('')
@@ -203,6 +109,62 @@ function typeWrite(){
     const tempo = fim ? 4000 : deletar ? spedUp : normalSpeed
     setTimeout(() => typeWrite(), tempo)
 }
-if(loading()){
-    typeWrite()
+
+roboBaixo = document.getElementsByClassName('robo-animaa')
+roboCima = document.getElementsByClassName('robo-anima')
+moverDir = document.getElementsByClassName('move')
+moverEsq = document.getElementsByClassName('moveb')
+
+var largura = window.innerWidth
+document.documentElement.clientWidth
+document.body.clientWidth;
+
+function moverRobo(){
+    let i = 0
+    let j = 0
+    let c = 2
+
+    roboCima[0].style.transform = 'translateX(0px)'
+    roboBaixo[0].style.transform = 'translateX(0px)'
+    roboCima[0].style.display = 'block'
+   
+    move = setInterval(function(){
+        roboCima[0].style.transform = `translateX(${i}px)`
+
+        if(roboCima[0].style.transform == 'translateX(1420px)'){
+            roboCima[0].style.display = 'none'
+            roboCima[0].style.transform = 'translateX(0px)'
+            c = 1
+        }
+        else{
+            i = i + 1
+        }
+        if(c == 1){
+            roboBaixo[0].style.display = 'block'
+            roboBaixo[0].style.transform = `translateX(${j}px)`
+            if(roboBaixo[0].style.transform == 'translateX(-1425px)'){
+                roboBaixo[0].style.display = 'none'
+                roboBaixo[0].style.transform = 'translateX(0px)'
+                clearInterval(move)
+                c = 0
+            }
+            else{
+                j = j-1;
+            }
+            
+            if(c == 0){
+                moverRobo()
+            }
+        }
+        //}
+    }, 0.01)
+}
+
+
+if(largura >= 1500){
+    var m = setInterval(moverRobo(), 100)
+    if(loading()){
+        title.innerHTML = ''
+        typeWrite()
+    }
 }

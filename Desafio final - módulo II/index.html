@@ -11,6 +11,7 @@
     <title>MARIA</title>
     <link rel="shortcut icon" href="/assets/Imagens/logo.png" type="image/x-icon" sizes="300x300">
 </head>
+
 <body onload="loading()">
     <div class="box-load" id="load">
         <div class="pre"></div>
@@ -21,7 +22,7 @@
         <header id="header">
             <div class="header-container">
                 <div class="header-logo">
-                    <img src="/assets/Imagens/logo-fundoamarelo.png">
+                    <img src="/assets/Imagens/logo.png">
                 </div>
                 <nav class="header-navbar" id="navbar">
                     <ul>
@@ -38,57 +39,60 @@
         </header>
         <section class="home-content">
             <div class="home-content-left surgir">
-                <h1 class="line cursor-digitando"></h1>
+                <h1 class="line cursor-digitando">Olá, bem vindo ao MARIA</h1>
                 <h2 class="subtitle">Somos o laboratório de robótica do IFRN-campus Natal Zona Norte</h2>
-                <button type="button">
+                <button type="button" id="conhecer">
                     <i class="fa-solid fa-arrow-down"></i>
-                    <a href=""> CONHEÇA MAIS</a>
+                    <a href="#sobre"> CONHEÇA MAIS</a>
                 </button>
             </div>
-            <div class="home-content-right-carrosel">
-                <div class="slide fade">
-                    <img src="/assets/Imagens/Sobre-carrosel/index-ft1_auto_x2.jpg" alt="MARIA na OBR 2018">
-                </div>
-                <div class="slide fade">
-                    <img src="/assets/Imagens/Sobre-carrosel/projeto-1.jpg" alt="">
-                </div>
-                <div class="slide fade">
-                    <img src="/assets/Imagens/Sobre-carrosel/noticias-ft2.jpg" alt="">
-                </div>
-                <a class="voltar" onclick="passarSlide(-1)">❮</a>
-                <a class="prox" onclick="passarSlide(1)">❯</a>
-                <div style="text-align: center;">
-                    <span class="ponto" onclick="passarSlidePonto(1)"></span>
-                    <span class="ponto" onclick="passarSlidePonto(2)"></span>
-                    <span class="ponto" onclick="passarSlidePonto(3)"></span>
-                </div>
+            <div class="forma-fundo"></div>
+            <div class="robo-anima">
+                <img src="/assets/Imagens/Oficinas/robo-move.png" alt="Robot movendo">
+            </div>
+            <div class="robo-animaa">
+                <img src="/assets/Imagens/Oficinas/robo-move.png" alt="Robot movendo">
             </div>
         </section>
         <div id="sobre"></div>
         <section class="sobre">
             <h1>SOBRE NÓS</h1>
-            <div class="sobre-content-carrosel from-bottom play-on-screen" >
-                <div class="sobre-card pass">
+            <div class="sobre-content from-bottom play-on-screen" >
+                <div class="sobre-card">
                     <div class="sobre-content-left">
                         <img src="/assets/Imagens/zyro-image.png" alt="Sobre nós">
                     </div>
                     <div class="sobre-content-right">
                         <h2>MARIA<img src="/assets/Imagens/Icones/Icone-sobrenós.png"></img></h2>
                         <p>Nós, o MARIA (Movimento Aberto de Robótica, Inovação e Automação), formamos um projeto nascido no IFRN-Campus Natal Zona norte com a intenção de culminar a ampliação da participação jovem no universo da tecnologia e, além disso, visamos uma maior inserção feminina nessa área.</p>
-                        <p>Dessa forma, participamos de inúmeros torneios, competições e eventos relacionados a robótica educacional. Dentre os diversos campeonatos os quais participamos, destacam-se: a Olimpiada Brasileira de Robótica (OBR) - tanto em sua fase prática, quanto teórica - First League Lego (FLL) e a Competição Brasileira de Robótica (CBR)</p>
+                        <p>Dessa forma, participamos de inúmeros torneios, competições e eventos relacionados a robótica educacional. Dentre os diversos campeonatos os quais participamos, destacam-se: a Olimpiada Brasileira de Robótica (OBR) - tanto em sua fase prática, quanto teórica - First League Lego (FLL) e a Competição Brasileira de Robótica (CBR).</p>
                     </div>
                 </div>
-                <div class="sobre-card pass">
-                    <div class="sobre-content-left-02">
-                        <img src="/assets/Imagens/Sobre_nos/principios.png" alt="Valores do MARIA">
+            </div>
+            <div class="sobre-valores">
+                <h2>Nossos princípios</h2>
+                <div class="valores-icon-box">
+                    <div class="valores-card">
+                        <div class="icon"><img src="assets/Imagens/Icones/amizade.png" alt="icone-amizade"></div>
+                        <span>Amizade</span>
                     </div>
-                    <div class="sobre-content-right-02">
-                        <h2>Valores do MARIA<img src="/assets/Imagens/Icones/value.png"></img></h2>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                    <div class="valores-card">
+                        <div class="icon"><img src="assets/Imagens/Icones/união.png" alt="icone-amizade"></div>
+                        <span>União</span>
+                    </div>
+                    <div class="valores-card">
+                        <div class="icon"><img src="assets/Imagens/Icones/inclusão.png" alt="icone-amizade"></div>
+                        <span>Inclusão</span>
+                    </div>
+                    <div class="valores-card">
+                        <div class="icon"><img src="assets/Imagens/Icones/respect.png" alt="icone-amizade"></div>
+                        <span>Respeito</span>
+                    </div>
+                    <div class="valores-card">
+                        <div class="icon"><img src="assets/Imagens/Icones/diversao.png" alt="icone-amizade"></div>
+                        <span>Diversão</span>
                     </div>
                 </div>
-                <a class="voltar-sobre" onclick="passarSlideSobre(-1)">❮</a>
-                <a class="proximo-sobre" onclick="passarSlideSobre(1)">❯</a>
             </div>
         </section>
         <div id="projetos"></div>
@@ -101,7 +105,7 @@
                     </div>
                     <div class="card-MAAP-text">
                         <h2>Maria Abre as Portas</h2>
-                        <p>Ainda que, tenha começado a ser executado em 2019, o MARIA Abre as portas começou a ser moldado três anos antes e caracteriza-se como um dos principais projetos que resumem a essencia e os principios do Movimento. Nesse sentido, o projeto tem como objetivo difundir a ciência e tecnologia para jovens estudantes do ensino fundamental de escolas públicas da Zona Norte de Natal por meio da robótica, utilizando-se da metodologia STEM, a qual une ciência, tecnologia, engenharia e matemática para resolução de problemas práticos.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                         <img class="girar-icon" src="/assets/Imagens/Icones/Icone-projetos-maap.png">
                     </div>
                 </div>
@@ -111,7 +115,7 @@
                     </div>
                     <div class="card-MAAP-text">
                         <h2>Oficinas do MARIA</h2>
-                        <p>Além de difundir a tecnologia para fora do Instituto, o MARIA também preocupa-se com os discentes do Campus. Pensando nisso, foram realizadas oficinais e competições locais para divulgar o trabalho desenvolvido no Movimento, além de fazer um convite a participação do Movimento. Essas oficinas foram promovidas durante os intervalos das aulas tanto no turno matutino quanto no turno vespertino.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                         <img class="girar-icon" src="/assets/Imagens/Icones/Icone-projetos-oficinas.png">
                     </div>
                 </div>
@@ -121,7 +125,7 @@
                     </div>
                     <div class="card-MAAP-text">
                         <h2>Apresentando o MARIA</h2>
-                        <p>Somadas às demais atividades desenvolvidas durante todo o período letivo, o MARIA sempre foi um dos principais alvos de visita nos períodos de eventos a nível estadual do Instituto, a exemplo da AFS Intercultura Brasil, que tem uma parceira de longa de data com o IFRN e oferece oportunidades de Aprendizagem Intercultural. Ademais, com a finalidade de influenciar a comunidade no entorno do Campus, o MARIA recebia periódicas visitas de turmas de nível fundamental da rede pública. </p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                         <img class="girar-icon" src="/assets/Imagens/Icones/icones-projetos-apresentando.png">
                     </div>
                 </div>
